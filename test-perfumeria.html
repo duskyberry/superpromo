@@ -2,6 +2,20 @@
 <html>
 <head>
 <meta charset="utf-8">
+<title>El Test de la Perfumería: descubre qué perfume va contigo | SuperPromo</title>
+<meta name="description" content="¿Eres de aromas frescos, dulces o misteriosos? Responde 15 preguntas divertidas, descubre tu personalidad olfativa y encuentra tres perfumes para ti.">
+<meta property="og:title" content="El Test de la Perfumería | SuperPromo">
+<meta property="og:description" content="15 preguntas para descubrir qué perfume va contigo. Tu personalidad nos dirá a qué hueles.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.superpromo.online/assets/brand/og-perfumeria.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="800">
+<meta property="og:url" content="https://www.superpromo.online/test-perfumeria.html">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:secure_url" content="https://www.superpromo.online/assets/brand/og-perfumeria.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.superpromo.online/assets/brand/og-perfumeria.png">
+<link rel="canonical" href="https://www.superpromo.online/test-perfumeria.html">
 <meta name="color-scheme" content="dark">
 <style id="sp-boot">html,body{background:#000!important;margin:0}body{animation:spPageIn .7s cubic-bezier(.2,.7,.2,1) both}@keyframes spPageIn{from{opacity:0}to{opacity:1}}@media (prefers-reduced-motion:reduce){body{animation:none}}</style>
 <link rel="icon" type="image/png" href="assets/brand/sp-mark.png">
@@ -36,11 +50,11 @@ button,input{font-family:inherit}
 </helmet>
 <header style="border-bottom:1px solid #262626">
   <div style="max-width:960px;margin:0 auto;padding:0 20px;height:64px;display:flex;align-items:center;gap:12px">
-    <a href="SuperPromo.dc.html" aria-label="SuperPromo, ir al inicio" style="display:flex;align-items:center;gap:10px;color:#F1F1F1">
+    <a href="./" aria-label="SuperPromo, ir al inicio" style="display:flex;align-items:center;gap:10px;color:#F1F1F1">
       <img src="assets/brand/sp-mark.png" alt="" width="36" height="36" style="width:36px;height:36px">
     </a>
     <span style="margin-left:auto;font-size:11px;font-weight:700;letter-spacing:.14em;color:#000;background:#FC6302;padding:5px 10px;border-radius:999px">TEST</span>
-    <a href="SuperPromo.dc.html" style="height:44px;display:flex;align-items:center;padding:0 18px;border-radius:999px;border:1px solid #343434;background:#111;color:#F1F1F1;font-size:13px;font-weight:700;letter-spacing:.04em;white-space:nowrap" style-hover="color:#fff;border-color:#FB02AA">VOLVER AL INICIO</a>
+    <a href="./" style="height:44px;display:flex;align-items:center;padding:0 18px;border-radius:999px;border:1px solid #343434;background:#111;color:#F1F1F1;font-size:13px;font-weight:700;letter-spacing:.04em;white-space:nowrap" style-hover="color:#fff;border-color:#FB02AA">VOLVER AL INICIO</a>
   </div>
 </header>
 <main style="min-height:70vh;background:linear-gradient(160deg,#FB02AA 0%,#FC6302 100%);padding:clamp(16px,4vw,40px) clamp(12px,4vw,32px) 56px">
@@ -93,6 +107,16 @@ button,input{font-family:inherit}
             <button type="button" onClick="{{ back }}" style="align-self:flex-start;height:48px;padding:0 24px;border-radius:999px;border:1px solid #2A2A2A;background:#111;color:#F1F1F1;font-size:14px;font-weight:600;cursor:pointer">Anterior</button>
           </div>
         </div>
+      </sc-if>
+
+      <sc-if value="{{ isReady }}" hint-placeholder-val="{{ false }}">
+        <section aria-labelledby="pf-ready" style="text-align:center;padding:clamp(20px,6vw,60px) 0">
+          <img src="assets/perfumeria/misterio-f.png" alt="" width="300" height="300" style="width:min(180px,45vw);height:auto;margin:0 auto;border-radius:24px">
+          <h2 id="pf-ready" style="margin:24px 0 0;font-size:clamp(32px,6vw,52px);font-weight:900;line-height:1;letter-spacing:-0.04em">¡Tu resultado está listo!</h2>
+          <p style="margin:14px auto 0;max-width:440px;font-size:16px;line-height:1.6;color:#C4C4C4">Ya sabemos a qué hueles. ¿Descubrimos tus 3 perfumes ideales?</p>
+          <button type="button" onClick="{{ reveal }}" style="margin-top:28px;height:58px;padding:0 36px;border-radius:999px;border:0;background:#FB02AA;color:#000;font-weight:800;font-size:15px;letter-spacing:.08em;cursor:pointer" style-hover="background:#FF2DBA">VER MI RESULTADO</button>
+          <div style="margin-top:14px"><button type="button" onClick="{{ backLast }}" style="background:none;border:0;color:#A6A6A6;font-size:13px;text-decoration:underline;cursor:pointer">Cambiar mi última respuesta</button></div>
+        </section>
       </sc-if>
 
       <sc-if value="{{ isResult }}" hint-placeholder-val="{{ false }}">
@@ -194,17 +218,17 @@ button,input{font-family:inherit}
         <div>
           <p style="margin:0 0 14px;font-size:11px;font-weight:600;letter-spacing:.14em;color:#FC6302">COMPRAR</p>
           <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:14px">
-            <li><a href="SuperPromo.dc.html#lo-mas-buscado" style="color:#D6D6D6" style-hover="color:#fff">Lo más buscado</a></li>
-            <li><a href="SuperPromo.dc.html#marcas" style="color:#D6D6D6" style-hover="color:#fff">Marcas</a></li>
-            <li><a href="SuperPromo.dc.html#destacados" style="color:#D6D6D6" style-hover="color:#fff">Destacados</a></li>
-            <li><a href="SuperPromo.dc.html#comparar" style="color:#D6D6D6" style-hover="color:#fff">Comparador</a></li>
-            <li><a href="SuperPromo.dc.html#perfumeria" style="color:#D6D6D6" style-hover="color:#fff">Perfumería</a></li>
+            <li><a href="./#lo-mas-buscado" style="color:#D6D6D6" style-hover="color:#fff">Lo más buscado</a></li>
+            <li><a href="./#marcas" style="color:#D6D6D6" style-hover="color:#fff">Marcas</a></li>
+            <li><a href="./#destacados" style="color:#D6D6D6" style-hover="color:#fff">Destacados</a></li>
+            <li><a href="./#comparar" style="color:#D6D6D6" style-hover="color:#fff">Comparador</a></li>
+            <li><a href="./#perfumeria" style="color:#D6D6D6" style-hover="color:#fff">Perfumería</a></li>
           </ul>
         </div>
         <div>
           <p style="margin:0 0 14px;font-size:11px;font-weight:600;letter-spacing:.14em;color:#FC6302">INTERACTIVO</p>
           <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:14px">
-            <li><a href="SuperPromo.dc.html#calculadora-msi" style="color:#D6D6D6" style-hover="color:#fff">Calculadora MSI</a></li>
+            <li><a href="./#calculadora-msi" style="color:#D6D6D6" style-hover="color:#fff">Calculadora MSI</a></li>
             <li><a href="Quiz.dc.html" style="color:#D6D6D6" style-hover="color:#fff">Test de personalidad</a></li>
             <li><a href="Test Perfumeria.dc.html" style="color:#D6D6D6" style-hover="color:#fff">Test de la perfumería</a></li>
           </ul>
@@ -212,18 +236,18 @@ button,input{font-family:inherit}
         <div>
           <p style="margin:0 0 14px;font-size:11px;font-weight:600;letter-spacing:.14em;color:#FC6302">APRENDER</p>
           <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:14px">
-            <li><a href="SuperPromo.dc.html#negocios-y-reventa" style="color:#D6D6D6" style-hover="color:#fff">Negocios y reventa</a></li>
-            <li><a href="SuperPromo.dc.html#recursos" style="color:#D6D6D6" style-hover="color:#fff">Recursos</a></li>
-            <li><a href="SuperPromo.dc.html#blog" style="color:#D6D6D6" style-hover="color:#fff">Blog</a></li>
+            <li><a href="./#negocios-y-reventa" style="color:#D6D6D6" style-hover="color:#fff">Negocios y reventa</a></li>
+            <li><a href="./#recursos" style="color:#D6D6D6" style-hover="color:#fff">Recursos</a></li>
+            <li><a href="./#blog" style="color:#D6D6D6" style-hover="color:#fff">Blog</a></li>
           </ul>
         </div>
         <div>
           <p style="margin:0 0 14px;font-size:11px;font-weight:600;letter-spacing:.14em;color:#FC6302">SUPERPROMO</p>
           <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:14px">
-            <li><a href="SuperPromo.dc.html#quienes-somos" style="color:#D6D6D6" style-hover="color:#fff">Quiénes somos</a></li>
-            <li><a href="SuperPromo.dc.html#contacto" style="color:#D6D6D6" style-hover="color:#fff">Contacto</a></li>
-            <li><a href="SuperPromo.dc.html#privacidad" style="color:#D6D6D6" style-hover="color:#fff">Aviso de privacidad</a></li>
-            <li><a href="SuperPromo.dc.html#terminos" style="color:#D6D6D6" style-hover="color:#fff">Términos y condiciones</a></li>
+            <li><a href="./#quienes-somos" style="color:#D6D6D6" style-hover="color:#fff">Quiénes somos</a></li>
+            <li><a href="./#contacto" style="color:#D6D6D6" style-hover="color:#fff">Contacto</a></li>
+            <li><a href="./#privacidad" style="color:#D6D6D6" style-hover="color:#fff">Aviso de privacidad</a></li>
+            <li><a href="./#terminos" style="color:#D6D6D6" style-hover="color:#fff">Términos y condiciones</a></li>
           </ul>
         </div>
       </nav>
@@ -286,7 +310,8 @@ class Component extends DCLogic {
   }
   async loadCatalog() {
     try {
-      const txt = await (await fetch('SuperPromo.dc.html')).text();
+      let txt = '';
+      for (const u of ['index.html', 'SuperPromo.dc.html']) { try { const r = await fetch(u); if (r.ok) { const tt = await r.text(); if (tt.includes("cat: 'fragancias'")) { txt = tt; break; } } } catch (e) {} }
       const re = /\{ id: '([^']+)', cat: 'fragancias',([\s\S]*?)\},\n/g; const cat = {}; let m;
       while ((m = re.exec(txt))) { const b = m[2]; const g = k => { const r = b.match(new RegExp(k + ": (\"[^\"]*\"|'[^']*')")); return r ? r[1].slice(1, -1) : ''; }; cat[m[1]] = { id: m[1], brand: g('brand'), short: g('short'), name: g('name'), img: g('img'), url: g('url'), blurb: g('blurb') }; }
       this.setState({ catalog: cat });
@@ -364,8 +389,10 @@ class Component extends DCLogic {
     const v = {
       invite: async () => { const url = 'https://www.superpromo.online/Test%20Perfumeria.dc.html'; const text = '¿Y tú a qué hueles? Descubre tus 3 perfumes ideales con el test de SuperPromo:'; try { if (navigator.share) { await navigator.share({ title: 'SuperPromo', text, url }); return; } await navigator.clipboard.writeText(text + ' ' + url); this.setState({ inviteMsg: 'Copiamos el enlace. ¡Pégalo donde quieras!' }); } catch (e) {} },
       inviteMsg: s.inviteMsg || '',
-      pfRecBlog: [{"slug":"como-saber-que-perfume-va-conmigo","title":"¿Cómo saber qué perfume va conmigo?","cat":"Hogar y estilo de vida","catUpper":"HOGAR Y ESTILO DE VIDA","href":"SuperPromo.dc.html#blog/como-saber-que-perfume-va-conmigo"},{"slug":"por-que-paco-rabanne-nunca-pasa-de-moda","title":"¿Por qué nunca pasa de moda Paco Rabanne?","cat":"Hogar y estilo de vida","catUpper":"HOGAR Y ESTILO DE VIDA","href":"SuperPromo.dc.html#blog/por-que-paco-rabanne-nunca-pasa-de-moda"},{"slug":"por-que-nautica-voyage-es-odiado-y-amado","title":"¿Por qué Nautica Voyage es tan odiado por muchos y amado por otros?","cat":"Hogar y estilo de vida","catUpper":"HOGAR Y ESTILO DE VIDA","href":"SuperPromo.dc.html#blog/por-que-nautica-voyage-es-odiado-y-amado"}],
-      isIntro: s.step === 'intro', isQuiz: s.step === 'quiz', isResult: s.step === 'result', name: s.name,
+      pfRecBlog: [{"slug":"como-saber-que-perfume-va-conmigo","title":"¿Cómo saber qué perfume va conmigo?","cat":"Hogar y estilo de vida","catUpper":"HOGAR Y ESTILO DE VIDA","href":"./#blog/como-saber-que-perfume-va-conmigo"},{"slug":"por-que-paco-rabanne-nunca-pasa-de-moda","title":"¿Por qué nunca pasa de moda Paco Rabanne?","cat":"Hogar y estilo de vida","catUpper":"HOGAR Y ESTILO DE VIDA","href":"./#blog/por-que-paco-rabanne-nunca-pasa-de-moda"},{"slug":"por-que-nautica-voyage-es-odiado-y-amado","title":"¿Por qué Nautica Voyage es tan odiado por muchos y amado por otros?","cat":"Hogar y estilo de vida","catUpper":"HOGAR Y ESTILO DE VIDA","href":"./#blog/por-que-nautica-voyage-es-odiado-y-amado"}],
+      isIntro: s.step === 'intro', isQuiz: s.step === 'quiz', isResult: s.step === 'result', isReady: s.step === 'ready',
+      reveal: () => { window.scrollTo(0, 0); this.setState({ step: 'result', cardUrl: '' }, () => { this.makeCard(); track('perfumeria_test_complete', { result: this.score() }); }); },
+      backLast: () => this.setState({ step: 'quiz', i: 14 }), name: s.name,
       introIll: ['ducha-f', 'citrico-m', 'misterio-f', 'rebelde-m'].map(f => 'assets/perfumeria/' + f + '.png'),
       onName: e => this.setState({ name: e.target.value.replace(/[<>]/g, ''), nameErr: false }),
       sexOpts: [['m', 'Hombre'], ['f', 'Mujer'], ['n', 'Prefiero no decir']].map(([k, label]) => ({ label, on: String(s.sex === k), pick: () => this.setState({ sex: k }), ...sel(s.sex === k) })),
@@ -381,7 +408,7 @@ class Component extends DCLogic {
         opts: q.o.map((o, j) => ({ icon: o[0], text: o[1], on: String(a === j), pick: () => {
           if (this._busy) return; this._busy = true;
           const ans = this.state.ans.slice(), qi = this.state.i; ans[qi] = j; this.setState({ ans }); track('perfumeria_question_answer', { question: qi + 1 });
-          setTimeout(() => { this._busy = false; if (this.state.i !== qi || this.state.step !== 'quiz') return; if (qi < 14) this.setState({ i: qi + 1 }); else this.setState({ step: 'result', cardUrl: '' }, () => { this.makeCard(); track('perfumeria_test_complete', { result: this.score() }); }); }, 280);
+          setTimeout(() => { this._busy = false; if (this.state.i !== qi || this.state.step !== 'quiz') return; if (qi < 14) this.setState({ i: qi + 1 }); else this.setState({ step: 'ready' }); }, 280);
         }, ...sel(a === j) })),
         back: () => s.i === 0 ? this.setState({ step: 'intro' }) : this.setState({ i: s.i - 1 }),
       });
