@@ -1,0 +1,355 @@
+// Categoría B — Emprendimiento y negocios con poca inversión
+export const POSTS_EMPRENDE = [
+{
+  slug: 'negocios-con-menos-de-5000-pesos', catKey: 'emprende', cat: 'Emprendimiento',
+  title: '10 negocios que puedes empezar con menos de $5,000 pesos',
+  seoTitle: '10 negocios con menos de $5,000 pesos en México | SuperPromo',
+  description: 'Diez negocios para empezar en México con menos de $5,000: inversión inicial, costos, precio sugerido, riesgos y cuántas ventas necesitas para recuperar lo invertido.',
+  excerpt: 'Inversión inicial, margen por venta y punto de equilibrio de cada idea, con las cuentas a la vista para que decidas con números.',
+  coverText: '$5K', keywords: ['negocios con poca inversión', 'negocios con 5000 pesos', 'negocio desde casa México', 'emprender con poco dinero'],
+  published: '2026-10-24', checked: '2026-10-24',
+  related: ['mp-point-air', 'mp-point-smart-2', 'impresora-termica-58', 'bolsas-holograficas-500'],
+  body: [
+    { p: 'Con menos de $5,000 pesos puedes empezar negocios de comida para llevar, servicios a domicilio, venta por catálogo, reparaciones básicas, regalos personalizados o servicios digitales. Los que tienen más probabilidad de funcionar son los que resuelven una necesidad cercana, se venden primero a tu red de contactos y tienen un margen suficiente para recuperar la inversión en pocas semanas.' },
+    { p: 'Para cada idea calculamos la inversión inicial, el margen por venta y el punto de equilibrio: cuántas ventas necesitas para recuperar lo invertido. Las cifras son estimaciones de octubre de 2026 y cambian según tu ciudad y proveedores.' },
+    { tip: 'Punto de equilibrio = inversión inicial ÷ ganancia por venta. Ganancia por venta = precio − costo variable (materiales, empaque, envío y comisiones de esa venta).' },
+    { h2: 'Comparativa de las 10 ideas' },
+    { table: { head: ['Negocio', 'Inversión inicial', 'Precio de venta', 'Costo por venta', 'Ganancia por venta', 'Ventas para recuperar'], rows: [
+      ['Postres por encargo', '$2,500', '$60 por pieza', '$25', '$35', '72 piezas'],
+      ['Desayunos o lunch para oficinas', '$3,500', '$75', '$40', '$35', '100 órdenes'],
+      ['Lavado de autos a domicilio', '$3,000', '$180', '$30', '$150', '20 servicios'],
+      ['Regalos personalizados', '$4,000', '$250', '$110', '$140', '29 piezas'],
+      ['Venta de plantas', '$3,000', '$120', '$55', '$65', '47 plantas'],
+      ['Reparación y fundas de celular', '$4,500', '$250 promedio', '$100', '$150', '30 servicios'],
+      ['Clases particulares', '$800', '$200 por hora', '$20', '$180', '5 horas'],
+      ['Paseo y cuidado de mascotas', '$1,200', '$120 por paseo', '$10', '$110', '11 paseos'],
+      ['Diseño para redes sociales', '$1,500', '$1,200 por paquete', '$100', '$1,100', '2 paquetes'],
+      ['Limpieza de hogar', '$1,500', '$450 por servicio', '$60', '$390', '4 servicios']
+    ] } },
+    { p: 'La tabla no incluye tu tiempo. Un servicio de limpieza recupera la inversión rápido, pero cada venta requiere varias horas de trabajo. Al comparar ideas, calcula también cuánto ganas por hora.' },
+    { h2: '1. Postres por encargo' },
+    { p: 'Inversión: moldes, batidora sencilla, empaques e insumos para una primera tanda. Funciona bien vendiendo por encargo a tu red y a negocios cercanos. Riesgo principal: producto perecedero; produce solo lo que ya vendiste. Revisa las reglas sanitarias de tu municipio si vas a vender a negocios.' },
+    { h2: '2. Desayunos o lunch para oficinas' },
+    { p: 'Inversión: recipientes, insumos de la primera semana y una hielera. Vende por pedido anticipado con menú semanal. Riesgo: tiempo de preparación y entrega puntual. Ventaja: clientes recurrentes que compran todos los días.' },
+    { h2: '3. Lavado de autos a domicilio' },
+    { p: 'Inversión: cubetas, microfibras, shampoo, cera y aspiradora portátil. Margen alto por servicio. Riesgo: depende del clima y de tener acceso a agua en el domicilio del cliente; cobra extra por vehículos grandes.' },
+    { h2: '4. Regalos personalizados' },
+    { p: 'Inversión: insumos para tazas, cajas o canastas y algunas piezas de muestra. Se vende mucho en fechas como Día de las Madres, San Valentín y Navidad. Riesgo: demanda estacional; aprovecha los meses tranquilos para crear catálogo.' },
+    { h2: '5. Venta de plantas' },
+    { p: 'Inversión: plantas de vivero, macetas y sustrato. Puedes vender en línea, en bazares o a oficinas. Riesgo: plantas que no sobreviven; empieza con especies resistentes y aprende sus cuidados antes de comprar volumen.' },
+    { h2: '6. Reparación básica y accesorios de celular' },
+    { p: 'Inversión: kit de herramientas, micas, fundas y cargadores. Requiere aprender reparaciones simples como cambio de mica o batería. Riesgo: responsabilidad si dañas un equipo; empieza con servicios sencillos y explica claramente qué cubres.' },
+    { h2: '7. Clases particulares' },
+    { p: 'Inversión mínima: material didáctico y publicidad local. Funciona para regularización escolar, idiomas, música o computación. Riesgo: ingreso limitado por las horas disponibles; considera clases en grupo pequeño.' },
+    { h2: '8. Paseo y cuidado de mascotas' },
+    { p: 'Inversión: correas, bolsas, botiquín básico y publicidad en tu colonia. La confianza es todo: pide referencias y comparte fotos de cada paseo. Riesgo: accidentes; establece reglas claras y un número máximo de perros por paseo.' },
+    { h2: '9. Diseño para redes sociales' },
+    { p: 'Inversión: herramientas de diseño con plan gratuito o de bajo costo y un portafolio. Se vende a negocios locales que no tienen tiempo de publicar. Riesgo: clientes que piden cambios sin fin; define en el paquete cuántas revisiones incluyes.' },
+    { h2: '10. Limpieza de hogar' },
+    { p: 'Inversión: productos de limpieza, herramientas y transporte. Alta demanda en zonas urbanas. Riesgo: trabajo físico intenso y responsabilidad en casas ajenas; acuerda por escrito qué incluye cada servicio.' },
+    { h2: 'Cómo elegir la tuya' },
+    { ol: ['Elige algo que ya sepas hacer o que puedas aprender en dos semanas.', 'Valida antes de invertir: ofrece el producto o servicio a 10 personas y cuenta cuántas comprarían.', 'Calcula tu punto de equilibrio y tu ganancia por hora.', 'Empieza pequeño: compra solo lo necesario para las primeras ventas.', 'Reinvierte las primeras ganancias en lo que más se vende.'] },
+    { h2: 'Costos que suelen olvidarse' },
+    { ul: ['Transporte para comprar insumos o entregar.', 'Comisiones por pago con tarjeta o en plataformas.', 'Merma: producto que se echa a perder o se daña.', 'Publicidad pagada, si decides usarla.', 'Obligaciones fiscales: el SAT tiene regímenes para personas con actividad empresarial de bajos ingresos. Consulta con un contador.'] },
+    { p: 'Para poner precio sin trabajar gratis, revisa nuestra guía de cómo calcular el precio de un producto. Y si prefieres vender sin inventario, explora los productos digitales.' },
+    { links: ['calcular-precio-de-un-producto', 'que-vender-desde-casa-ideas', 'vender-productos-digitales-sin-inventario', 'antes-de-revender-cuentas-costos'] }
+  ],
+  faq: [
+    { q: '¿Qué negocio es más rentable con poca inversión?', a: 'Los servicios suelen tener el margen más alto porque casi no requieren materiales, como clases, diseño o limpieza. Pero dependen de tu tiempo. Compara ganancia por venta y ganancia por hora.' },
+    { q: '¿Necesito darme de alta en el SAT para empezar?', a: 'Si obtienes ingresos de forma regular, debes cumplir con tus obligaciones fiscales. Existen regímenes para personas físicas con ingresos bajos. Consulta con un contador o en el sitio del SAT.' },
+    { q: '¿Cómo consigo mis primeros clientes?', a: 'Empieza con tu red: familia, amigos, vecinos y compañeros de trabajo. Pide que te recomienden y comparte fotos de tu trabajo en redes sociales y grupos de tu colonia.' },
+    { q: '¿Cuánto tarda en recuperarse la inversión?', a: 'Depende de cuántas ventas hagas a la semana. Divide tu inversión entre la ganancia por venta para saber cuántas ventas necesitas, y estima en cuántas semanas puedes lograrlas.' },
+    { q: '¿Las cifras de la tabla son garantizadas?', a: 'No. Son estimaciones de referencia que cambian según tu ciudad, proveedores y precios de venta. Haz tus propias cuentas antes de invertir.' }
+  ],
+  sources: [
+    { t: 'SAT — Régimen Simplificado de Confianza y obligaciones fiscales', url: 'https://www.sat.gob.mx' },
+    { t: 'Profeco — Información para consumidores y proveedores', url: 'https://www.gob.mx/profeco' }
+  ]
+},
+{
+  slug: 'vender-productos-digitales-sin-inventario', catKey: 'emprende', cat: 'Emprendimiento',
+  title: 'Cómo ganar dinero vendiendo productos digitales sin tener inventario',
+  seoTitle: 'Vender productos digitales en México sin inventario | SuperPromo',
+  description: 'Qué productos digitales puedes vender, dónde venderlos (Hotmart, Etsy, tienda propia), cómo fijar precio, entregar y promocionarlos, y qué cuidar de derechos de autor.',
+  excerpt: 'Plantillas, ebooks, imprimibles e invitaciones: qué vender, dónde, a qué precio y cómo cuidar tus derechos de autor.',
+  coverText: 'PDF', keywords: ['vender productos digitales', 'productos digitales para vender', 'vender plantillas', 'vender ebooks México', 'Hotmart México'],
+  published: '2026-10-24', checked: '2026-10-24',
+  body: [
+    { p: 'Un producto digital es un archivo o acceso que creas una vez y vendes muchas veces sin fabricar ni almacenar nada: plantillas, ebooks, imprimibles, invitaciones digitales, cursos o presets. Para ganar dinero con ellos necesitas resolver un problema concreto para un público definido, elegir una plataforma que entregue el archivo automáticamente y dedicar tiempo constante a promocionarlo.' },
+    { p: 'Esta guía explica qué tipos de productos digitales se venden, en qué plataformas, cómo poner precio, cómo entregarlos y qué cuidar en derechos de autor.' },
+    { h2: 'Tipos de productos digitales' },
+    { table: { head: ['Producto', 'Ejemplo', 'Tiempo de creación', 'Rango de precio común'], rows: [
+      ['Plantillas', 'Presupuesto en hoja de cálculo, planner, menú para restaurante', 'Bajo a medio', '$50 a $300'],
+      ['Imprimibles', 'Hojas para colorear, calendarios, etiquetas', 'Bajo', '$30 a $150'],
+      ['Invitaciones digitales', 'Invitación editable de cumpleaños o boda', 'Bajo', '$80 a $400'],
+      ['Ebooks y guías', 'Guía de recetas, manual de un oficio', 'Medio a alto', '$100 a $400'],
+      ['Cursos', 'Curso grabado de un tema que dominas', 'Alto', '$300 a $2,000'],
+      ['Recursos para creadores', 'Presets, plantillas para redes', 'Medio', '$80 a $500']
+    ] } },
+    { p: 'Los rangos son referencias de lo que suele verse en plataformas en español; el precio adecuado depende del valor que entregas, tu nicho y la competencia.' },
+    { h2: 'Cómo elegir qué vender' },
+    { ol: ['Parte de algo que sabes hacer bien: tu trabajo, un pasatiempo o un problema que resolviste.', 'Busca la pregunta que la gente repite: en grupos, comentarios y búsquedas.', 'Revisa si ya hay productos parecidos: la competencia confirma que hay demanda.', 'Define qué harás distinto: más claro, más completo, más local o más bonito.', 'Crea una versión mínima y véndela antes de hacer una colección completa.'] },
+    { h2: 'Dónde venderlos' },
+    { table: { head: ['Opción', 'Ventajas', 'A considerar'], rows: [
+      ['Hotmart', 'Pensada para infoproductos y cursos; procesa pagos y entrega el acceso', 'Cobra comisión por venta; revisa sus tarifas vigentes'],
+      ['Etsy', 'Mercado global con búsqueda propia; fuerte en imprimibles y plantillas', 'Cobra por publicación y comisión; mucha competencia'],
+      ['Tienda propia', 'Control total de marca y precio', 'Debes atraer todo el tráfico y configurar pagos'],
+      ['Venta directa por redes', 'Inicio inmediato', 'La entrega y el cobro son manuales y no escalan']
+    ] } },
+    { p: 'Las tarifas y condiciones de cada plataforma cambian; revísalas en sus sitios oficiales antes de elegir.' },
+    { h2: 'Cómo poner precio' },
+    { p: 'En productos digitales casi no hay costo por unidad, así que el precio no se calcula sumando materiales. Se basa en tres preguntas: cuánto tiempo o dinero le ahorra a quien lo compra, cuánto cobran productos similares y cuántas ventas necesitas para que valga la pena tu tiempo.' },
+    { h3: 'Ejemplo de cálculo' },
+    { p: 'Si dedicas 20 horas a crear una plantilla de presupuesto y quieres valorar tu tiempo en $150 por hora, la inversión es de $3,000. Si la vendes en $149 y la plataforma retiene alrededor de 10% más una cuota fija, te quedan unos $130 por venta. Necesitarías 24 ventas para recuperar tu tiempo. Cada venta posterior es ganancia.' },
+    { h2: 'Entrega y experiencia de compra' },
+    { ul: ['Usa una plataforma que entregue el archivo automáticamente al confirmar el pago.', 'Incluye instrucciones claras: cómo abrirlo, editarlo o imprimirlo.', 'Prueba la compra tú mismo antes de lanzarlo.', 'Ofrece un correo de soporte y responde rápido.', 'Define tu política de reembolso y escríbela en la página de venta.'] },
+    { h2: 'Cómo promocionarlos' },
+    { ul: ['Muestra el producto en uso: capturas, videos cortos o ejemplos llenos.', 'Publica contenido gratuito relacionado que lleve al producto de pago.', 'Construye una lista de correo o comunidad desde el primer día.', 'Pide reseñas a tus primeros clientes.', 'Crea paquetes que combinen varios productos a mejor precio.'] },
+    { h2: 'Derechos de autor y licencias' },
+    { p: 'Todo lo que incluyas en tu producto debe ser tuyo o tener una licencia que permita uso comercial: tipografías, imágenes, ilustraciones y fragmentos de texto. Muchos recursos «gratis» solo permiten uso personal. Define también qué puede hacer tu comprador con el archivo: usarlo solo para él, para sus clientes o revenderlo. En México, el Instituto Nacional del Derecho de Autor (INDAUTOR) permite registrar obras para tener una prueba formal de autoría.' },
+    { tip: 'Si usas herramientas de inteligencia artificial para crear partes de tu producto, revisa sus términos de uso comercial y aporta tu propio criterio y edición. Un producto genérico es fácil de copiar y difícil de vender.' },
+    { h2: 'Errores comunes' },
+    { ul: ['Crear durante meses sin validar si alguien lo quiere.', 'Vender un producto demasiado general, «para todos».', 'Abandonar la promoción después del lanzamiento.', 'Usar recursos sin licencia comercial.', 'Poner un precio tan bajo que no compense tu tiempo.'] },
+    { links: ['ganar-dinero-con-inteligencia-artificial', 'calcular-precio-de-un-producto', 'conseguir-clientes-freelance', 'dinero-extra-desde-casa'] }
+  ],
+  faq: [
+    { q: '¿Qué productos digitales se venden más?', a: 'Suelen venderse bien las plantillas, los imprimibles, las invitaciones editables y las guías prácticas que resuelven un problema concreto. Lo que más influye es el nicho y la promoción, no solo el tipo de producto.' },
+    { q: '¿Necesito una página web para vender productos digitales?', a: 'No al inicio. Plataformas como Hotmart o Etsy procesan el pago y entregan el archivo. Una tienda propia te da más control cuando ya tienes clientes.' },
+    { q: '¿Cómo protejo mis productos digitales de la copia?', a: 'No hay protección total. Ayuda incluir tu marca, definir una licencia clara y registrar tu obra ante INDAUTOR. Actualizar el producto y dar soporte también te distingue de copias.' },
+    { q: '¿Tengo que pagar impuestos por vender productos digitales?', a: 'Sí, los ingresos por ventas en línea son ingresos gravables. Las plataformas pueden retener impuestos. Consulta con un contador tu régimen fiscal.' },
+    { q: '¿Cuánto se puede ganar?', a: 'Varía mucho. Hay quien vende unas cuantas piezas al mes y quien construye un ingreso estable. Depende del nicho, la calidad, el precio y la constancia en la promoción.' }
+  ],
+  sources: [
+    { t: 'INDAUTOR — Registro de obras', url: 'https://www.gob.mx/indautor' },
+    { t: 'Hotmart — Plataforma de productos digitales', url: 'https://hotmart.com/es' },
+    { t: 'SAT — Plataformas digitales', url: 'https://www.sat.gob.mx' }
+  ]
+},
+{
+  slug: 'que-vender-desde-casa-ideas', catKey: 'emprende', cat: 'Emprendimiento',
+  title: 'Qué vender para ganar dinero desde casa: 15 ideas rentables',
+  seoTitle: 'Qué vender desde casa: 15 ideas con márgenes | SuperPromo',
+  description: 'Quince productos para vender desde casa en México con costo estimado, precio de venta, margen bruto y retos de cada uno. Aprende a distinguir ingreso de ganancia.',
+  excerpt: 'Quince productos con costo, precio y margen bruto estimados. Y la diferencia entre lo que vendes y lo que realmente ganas.',
+  coverText: '15', keywords: ['qué vender desde casa', 'productos para vender', 'qué vender para ganar dinero', 'negocio desde casa ideas'],
+  published: '2026-10-24', checked: '2026-10-24',
+  related: ['bolsas-holograficas-500', 'impresora-termica-58', 'laminadora-rexqualis'],
+  body: [
+    { p: 'Los productos que más conviene vender desde casa son los que tienen demanda cercana, se producen o consiguen con poco capital y dejan un margen bruto suficiente después de materiales, empaque y comisiones: comida casera, postres, velas, jabones, plantas, accesorios, productos de belleza revendidos o artículos personalizados. La rentabilidad real depende de cuánto vendes, de tus costos totales y del tiempo que te toma cada pieza.' },
+    { h2: 'Antes de la tabla: ingreso, margen y ganancia' },
+    { p: 'Ingreso es lo que cobras. Margen bruto es lo que queda después de restar el costo directo de cada pieza. Ganancia es lo que queda después de restar también tus gastos fijos, como gas, internet, publicidad y transporte. Si vendes 50 velas a $150, tu ingreso es $7,500; si cada vela te cuesta $55, tu margen bruto es $4,750; si gastaste $900 en transporte y publicidad, tu ganancia es $3,850.' },
+    { h2: '15 ideas con números estimados' },
+    { table: { head: ['Producto', 'Costo por pieza', 'Precio de venta', 'Margen bruto', 'Reto principal'], rows: [
+      ['Galletas decoradas (docena)', '$90', '$220', '59%', 'Tiempo de decorado'],
+      ['Gelatinas artísticas', '$25', '$60', '58%', 'Refrigeración y entrega'],
+      ['Tamales por encargo (docena)', '$110', '$240', '54%', 'Producción en volumen'],
+      ['Salsas y chiles en conserva', '$35', '$90', '61%', 'Reglas sanitarias y etiquetado'],
+      ['Velas aromáticas', '$55', '$150', '63%', 'Competencia alta'],
+      ['Jabones artesanales', '$22', '$70', '69%', 'Tiempo de curado'],
+      ['Plantas suculentas', '$30', '$85', '65%', 'Cuidado y merma'],
+      ['Macetas pintadas', '$40', '$120', '67%', 'Fragilidad en envío'],
+      ['Aretes y pulseras', '$30', '$120', '75%', 'Diferenciación'],
+      ['Moños y accesorios para niñas', '$15', '$60', '75%', 'Temporadas escolares'],
+      ['Tazas personalizadas', '$70', '$180', '61%', 'Requiere equipo'],
+      ['Ropa de segunda mano seleccionada', '$60', '$180', '67%', 'Inventario variable'],
+      ['Productos de belleza revendidos', '$150', '$220', '32%', 'Margen bajo y autenticidad'],
+      ['Snacks saludables (bolsa)', '$28', '$65', '57%', 'Caducidad'],
+      ['Kits de manualidades para niños', '$80', '$200', '60%', 'Armado y presentación']
+    ] } },
+    { p: 'Todas las cifras son estimaciones de referencia a octubre de 2026. El margen bruto se calcula como (precio − costo) ÷ precio. No incluyen comisiones por pago con tarjeta o plataforma, que pueden restar entre 3% y 15% según el canal.' },
+    { h2: 'Cómo leer la tabla' },
+    { ul: ['Un margen alto con poca demanda gana menos que un margen medio con demanda constante.', 'Los productos de reventa tienen margen más bajo, pero requieren menos tiempo de producción.', 'Los productos de comida tienen recompra frecuente: un cliente satisfecho vuelve cada semana.', 'Los productos personalizados permiten cobrar más, pero cada pedido toma más tiempo.'] },
+    { h2: 'Qué cuidar según el tipo de producto' },
+    { h3: 'Comida' },
+    { p: 'Revisa los requisitos sanitarios de tu municipio y las normas de etiquetado si vendes a tiendas. Incluye fecha de elaboración y consumo preferente. Vende por encargo para evitar merma.' },
+    { h3: 'Cosmética artesanal' },
+    { p: 'Los jabones, cremas y velas deben hacerse con materiales adecuados y etiquetarse con sus ingredientes. Si haces afirmaciones de salud o beneficios, puedes requerir permisos específicos. Mantente en descripciones honestas.' },
+    { h3: 'Reventa' },
+    { p: 'Compra a proveedores confiables, verifica autenticidad y revisa si la marca permite la reventa. Calcula el margen real con envío y comisiones antes de comprar volumen.' },
+    { h2: 'Cómo validar antes de invertir' },
+    { ol: ['Haz una muestra pequeña de 5 a 10 piezas.', 'Ofrécela a personas que no sean tu familia directa.', 'Anota cuántas compran, qué preguntan y qué precio aceptan.', 'Ajusta el producto y el precio.', 'Solo entonces compra materiales en volumen.'] },
+    { h2: 'Dónde vender' },
+    { ul: ['Grupos de tu colonia, escuela o trabajo.', 'Marketplace de Facebook e Instagram.', 'Bazares y mercados locales de fin de semana.', 'Tiendas de la zona a consignación.', 'Marketplaces en línea para productos no perecederos.'] },
+    { tip: 'Empieza con una sola línea de producto y hazla muy bien. Tener 15 productos al mismo tiempo dispersa tu tiempo y tu dinero.' },
+    { links: ['calcular-precio-de-un-producto', 'negocios-con-menos-de-5000-pesos', 'antes-de-revender-cuentas-costos', 'vender-cosas-que-ya-tienes'] }
+  ],
+  faq: [
+    { q: '¿Qué es lo más fácil de vender desde casa?', a: 'La comida casera y los postres suelen venderse con facilidad en tu red cercana porque tienen recompra frecuente. Requieren cuidar higiene, tiempos y reglas sanitarias.' },
+    { q: '¿Qué diferencia hay entre margen y ganancia?', a: 'El margen bruto es lo que queda después del costo directo de cada pieza. La ganancia resta además tus gastos fijos, como transporte, publicidad, gas o internet.' },
+    { q: '¿Necesito permisos para vender comida desde casa?', a: 'Depende de tu municipio y del canal. Para vender a tiendas suelen pedirse requisitos sanitarios y de etiquetado. Consulta a las autoridades locales.' },
+    { q: '¿Conviene revender productos de marca?', a: 'Puede convenir si encuentras buen precio de compra, pero el margen suele ser más bajo y debes verificar autenticidad y las políticas de la marca.' },
+    { q: '¿Las cifras de margen son reales?', a: 'Son estimaciones de referencia. Tus costos y precios pueden variar según tu ciudad y proveedores. Haz tus propias cuentas con la fórmula de esta guía.' }
+  ],
+  sources: [
+    { t: 'COFEPRIS — Regulación sanitaria', url: 'https://www.gob.mx/cofepris' },
+    { t: 'SAT — Obligaciones de personas físicas', url: 'https://www.sat.gob.mx' }
+  ]
+},
+{
+  slug: 'conseguir-clientes-freelance', catKey: 'emprende', cat: 'Emprendimiento',
+  title: 'Cómo conseguir clientes por internet y empezar a trabajar como freelance',
+  seoTitle: 'Cómo conseguir clientes freelance por internet | SuperPromo',
+  description: 'Guía para empezar como freelance en México: portafolio, posicionamiento, plataformas, mensajes de prospección, propuestas, precios y contratos para tus primeros clientes.',
+  excerpt: 'Del portafolio al primer pago: cómo posicionarte, dónde buscar, qué mensaje enviar y cómo cobrar sin regalar tu trabajo.',
+  coverText: '1er', keywords: ['cómo conseguir clientes freelance', 'trabajar como freelance México', 'conseguir clientes por internet', 'freelancer principiante'],
+  published: '2026-10-24', checked: '2026-10-24',
+  body: [
+    { p: 'Para conseguir tus primeros clientes como freelance necesitas tres cosas: un servicio concreto dirigido a un tipo de cliente específico, un portafolio con dos o tres ejemplos que demuestren el resultado, y un sistema de contacto constante, ya sea en plataformas de freelance, redes profesionales o mensajes directos a negocios. La mayoría de los primeros clientes llegan por contacto directo y recomendación, no por esperar a que te encuentren.' },
+    { h2: '1. Define qué vendes y a quién' },
+    { p: '«Hago diseño» es difícil de comprar. «Diseño publicaciones de Instagram para restaurantes» es fácil de entender. Un posicionamiento específico te ayuda a escribir mejores mensajes, cobrar más y recibir recomendaciones.' },
+    { ul: ['Servicio: qué resultado entregas.', 'Cliente: qué tipo de negocio o persona lo necesita.', 'Problema: qué le duele a ese cliente hoy.', 'Diferencia: por qué tú y no otra persona.'] },
+    { h2: '2. Arma un portafolio mínimo' },
+    { p: 'No necesitas un sitio web perfecto. Necesitas dos o tres ejemplos claros. Si aún no tienes clientes, crea proyectos de práctica para negocios reales o ficticios, o haz un primer trabajo a precio reducido a cambio de permiso para mostrarlo y una recomendación.' },
+    { ul: ['Muestra el antes y el después cuando sea posible.', 'Explica el problema, lo que hiciste y el resultado.', 'Usa un formato fácil de compartir: un PDF, una página sencilla o un perfil profesional.'] },
+    { h2: '3. Dónde buscar clientes' },
+    { table: { head: ['Canal', 'Ventaja', 'A considerar'], rows: [
+      ['Plataformas como Workana, Upwork o Fiverr', 'Clientes que ya buscan freelancers', 'Comisiones y mucha competencia; revisa tarifas vigentes'],
+      ['LinkedIn', 'Contacto directo con empresas y profesionales', 'Requiere perfil cuidado y constancia'],
+      ['Negocios locales', 'Menos competencia, trato directo', 'Ciclos de venta más lentos'],
+      ['Tu red personal', 'Confianza inmediata', 'Se agota rápido; pide recomendaciones'],
+      ['Comunidades y grupos del sector', 'Oportunidades y referencias', 'Aporta valor antes de vender']
+    ] } },
+    { h2: '4. El mensaje de prospección' },
+    { p: 'Un buen mensaje es corto, personalizado y propone algo concreto. Evita los mensajes genéricos que podrían enviarse a cualquiera.' },
+    { tip: 'Plantilla: «Hola, [nombre]. Vi que [algo específico de su negocio]. Ayudo a [tipo de cliente] a [resultado]. Se me ocurrió una idea para [mejora concreta]. ¿Te la comparto en una llamada de 15 minutos esta semana?»' },
+    { ul: ['Envía entre 5 y 10 mensajes personalizados al día.', 'Da seguimiento una vez, de forma amable, después de 4 o 5 días.', 'Lleva un registro con fecha, nombre y respuesta.'] },
+    { h2: '5. Propuesta y precio' },
+    { p: 'Una propuesta clara incluye el problema que entendiste, lo que vas a entregar, en cuánto tiempo, cuántas revisiones incluye, el precio y la forma de pago. Cobra por proyecto o por paquete cuando el alcance es claro; por hora cuando no lo es.' },
+    { h3: 'Cómo calcular tu tarifa mínima' },
+    { p: 'Suma tus gastos mensuales y tu meta de ahorro, por ejemplo $18,000. Divide entre las horas facturables que realmente puedes trabajar al mes, por ejemplo 80, no 160, porque parte del tiempo se va en buscar clientes y administración. Tu tarifa mínima sería $225 por hora. Agrega impuestos y comisiones de plataforma si aplican.' },
+    { h2: '6. Formaliza el trabajo' },
+    { ul: ['Pide un anticipo, comúnmente entre 30% y 50%, antes de empezar.', 'Escribe un acuerdo sencillo con alcance, plazos, revisiones, pagos y propiedad del trabajo.', 'Define qué pasa si el cliente pide cambios fuera del alcance.', 'Entrega facturas si tu cliente las necesita; consulta tu régimen fiscal.'] },
+    { h2: '7. Convierte un cliente en varios' },
+    { ul: ['Entrega a tiempo y comunica avances.', 'Pide una recomendación por escrito al terminar.', 'Ofrece un servicio mensual de mantenimiento.', 'Pregunta si conoce a alguien con un problema similar.'] },
+    { h2: 'Errores comunes al empezar' },
+    { ul: ['Cobrar muy poco para «ganar experiencia» por demasiado tiempo.', 'Trabajar sin anticipo ni acuerdo escrito.', 'Aceptar cualquier proyecto aunque no sea tu especialidad.', 'Dejar de buscar clientes cuando tienes uno.'] },
+    { links: ['ganar-dinero-con-inteligencia-artificial', 'paginas-que-pagan-por-trabajar-desde-casa', 'trabajos-por-internet-para-principiantes', 'calcular-precio-de-un-producto'] }
+  ],
+  faq: [
+    { q: '¿Cómo consigo mi primer cliente freelance sin experiencia?', a: 'Crea dos o tres proyectos de práctica para tu portafolio, ofrece tu servicio a tu red y envía mensajes personalizados a negocios que podrían necesitarlo. Un primer trabajo a precio reducido a cambio de testimonio puede ayudarte.' },
+    { q: '¿Qué plataformas freelance funcionan en México?', a: 'Plataformas como Workana, Upwork y Fiverr aceptan freelancers desde México. Revisa sus comisiones, métodos de retiro y requisitos vigentes antes de registrarte.' },
+    { q: '¿Cuánto debo cobrar como freelance?', a: 'Calcula tu tarifa mínima dividiendo tus gastos y metas mensuales entre las horas que realmente puedes facturar. Después compara con el mercado y ajusta según el valor que entregas.' },
+    { q: '¿Necesito facturar como freelance?', a: 'Si tus clientes lo requieren o si tus ingresos son regulares, conviene estar inscrito en el SAT en el régimen adecuado. Consulta con un contador.' },
+    { q: '¿Cómo evito que un cliente no me pague?', a: 'Pide anticipo, firma un acuerdo con alcance y pagos, y entrega los archivos finales al recibir el pago completo.' }
+  ],
+  sources: [
+    { t: 'SAT — Régimen de actividades profesionales', url: 'https://www.sat.gob.mx' },
+    { t: 'Workana — Plataforma de freelance en Latinoamérica', url: 'https://www.workana.com' }
+  ]
+},
+{
+  slug: 'ganar-dinero-con-inteligencia-artificial', catKey: 'emprende', cat: 'Emprendimiento',
+  title: 'Cómo ganar dinero con inteligencia artificial: ideas que puedes monetizar',
+  seoTitle: 'Ganar dinero con inteligencia artificial: ideas reales | SuperPromo',
+  description: 'Servicios y productos que puedes ofrecer usando inteligencia artificial: habilidades necesarias, costos, limitaciones, uso comercial y cómo encontrar clientes que paguen.',
+  excerpt: 'Servicios reales que puedes vender apoyándote en IA, las habilidades que siguen siendo tuyas y cómo cobrar por resultados, no por herramientas.',
+  coverText: 'IA', keywords: ['ganar dinero con inteligencia artificial', 'negocios con IA', 'ideas para monetizar IA', 'trabajos con inteligencia artificial'],
+  published: '2026-10-24', checked: '2026-10-24',
+  body: [
+    { p: 'Se puede ganar dinero con inteligencia artificial ofreciendo servicios donde la IA acelera el trabajo y tú aportas criterio, revisión y conocimiento del cliente: redacción y edición de contenido, diseño asistido, automatización de tareas para negocios, investigación y resúmenes, atención al cliente o productos digitales. La IA no sustituye la habilidad de entender un problema y entregar un resultado confiable; quien cobra bien es quien combina ambas cosas.' },
+    { p: 'Esta guía presenta ideas realistas, qué habilidades requieren, cuánto cuesta empezar, qué limitaciones tienen y cómo conseguir clientes. No hay fórmulas de dinero rápido: son servicios que requieren aprendizaje y constancia.' },
+    { h2: 'Lo que la IA hace bien y lo que sigue siendo tuyo' },
+    { table: { head: ['La IA ayuda a', 'Tú sigues siendo responsable de'], rows: [
+      ['Generar borradores rápido', 'Que el contenido sea correcto y útil'],
+      ['Resumir y ordenar información', 'Verificar datos y fuentes'],
+      ['Crear variaciones de imágenes o textos', 'El criterio de qué funciona para el cliente'],
+      ['Automatizar pasos repetitivos', 'Diseñar el proceso y probar que no falle'],
+      ['Traducir y adaptar', 'El tono, el contexto local y la revisión final']
+    ] } },
+    { h2: 'Ideas que puedes monetizar' },
+    { h3: '1. Redacción y edición de contenido para negocios' },
+    { p: 'Blogs, descripciones de productos, correos y publicaciones. Habilidad clave: escribir bien y entender al cliente. La IA te ayuda con borradores; tú editas, verificas y adaptas la voz de la marca. Cobro típico: por pieza o paquete mensual.' },
+    { h3: '2. Gestión de redes sociales asistida' },
+    { p: 'Calendario de contenido, textos e imágenes para negocios locales. Habilidad clave: estrategia, diseño básico y constancia. Cobro: paquete mensual con número de publicaciones definido.' },
+    { h3: '3. Automatización de tareas para pequeños negocios' },
+    { p: 'Respuestas automáticas, formularios conectados a hojas de cálculo, recordatorios a clientes. Habilidad clave: lógica de procesos y manejo de herramientas de automatización. Cobro: por proyecto más mantenimiento mensual.' },
+    { h3: '4. Investigación y resúmenes' },
+    { p: 'Resúmenes de mercado, comparativas de proveedores o análisis de reseñas. Habilidad clave: verificar fuentes y presentar conclusiones claras. La IA puede inventar datos; la verificación es tu valor.' },
+    { h3: '5. Diseño asistido' },
+    { p: 'Ilustraciones, mockups y conceptos visuales como punto de partida. Habilidad clave: diseño y edición. Revisa los términos comerciales de cada herramienta y evita imitar estilos o marcas protegidas.' },
+    { h3: '6. Productos digitales' },
+    { p: 'Plantillas, guías o recursos creados con apoyo de IA y mejorados con tu experiencia. Funciona cuando el producto resuelve algo concreto y no es una copia genérica.' },
+    { h3: '7. Capacitación para equipos' },
+    { p: 'Talleres para enseñar a negocios a usar IA en su día a día. Habilidad clave: enseñar y conocer casos de uso del sector del cliente.' },
+    { h2: 'Costos para empezar' },
+    { table: { head: ['Concepto', 'Rango aproximado', 'Comentario'], rows: [
+      ['Herramientas de IA', '$0 a $500 al mes', 'Muchas tienen plan gratuito; los planes de pago suelen cobrarse en dólares'],
+      ['Herramientas de diseño y automatización', '$0 a $400 al mes', 'Empieza con planes gratuitos'],
+      ['Portafolio', '$0', 'Un documento o página sencilla'],
+      ['Aprendizaje', 'Tiempo', 'Tutoriales oficiales y práctica con proyectos reales']
+    ] } },
+    { h2: 'Limitaciones que debes conocer' },
+    { ul: ['La IA puede generar información incorrecta con mucha seguridad: verifica todo dato que entregues.', 'Cada herramienta tiene términos de uso comercial distintos: léelos antes de vender lo que produce.', 'No ingreses datos confidenciales de clientes sin su autorización y sin revisar la política de privacidad de la herramienta.', 'Las plataformas cambian funciones y precios con frecuencia.', 'Si el resultado es fácil de generar para cualquiera, su precio de mercado baja: tu valor está en el criterio y el servicio.'] },
+    { h2: 'Cómo encontrar clientes que paguen' },
+    { ol: ['Elige un sector que conozcas: restaurantes, consultorios, tiendas en línea.', 'Identifica una tarea que les quite tiempo.', 'Haz una demostración gratuita con su caso real.', 'Vende el resultado, no la herramienta: «responde mensajes en minutos», no «uso IA».', 'Ofrece un paquete mensual para tener ingreso recurrente.'] },
+    { tip: 'Sé transparente con tus clientes sobre el uso de IA en tu proceso. La confianza vale más que parecer que hiciste todo a mano.' },
+    { links: ['conseguir-clientes-freelance', 'vender-productos-digitales-sin-inventario', 'trabajos-por-internet-para-principiantes', 'dinero-extra-desde-casa'] }
+  ],
+  faq: [
+    { q: '¿Se puede ganar dinero con inteligencia artificial sin saber programar?', a: 'Sí. Muchos servicios, como redacción, gestión de redes o diseño asistido, no requieren programar. Sí requieren habilidades en el área y criterio para revisar el resultado.' },
+    { q: '¿Cuánto se puede ganar con IA?', a: 'Depende del servicio, el cliente y tu habilidad. No hay cifras garantizadas. Lo más estable suele ser un paquete mensual con varios clientes recurrentes.' },
+    { q: '¿Puedo vender imágenes o textos generados con IA?', a: 'Depende de los términos de uso de cada herramienta y de que el resultado no infrinja derechos de terceros. Revisa las condiciones comerciales antes de vender.' },
+    { q: '¿La IA va a reemplazar a los freelancers?', a: 'Está cambiando muchas tareas. Quienes combinan IA con conocimiento del cliente, revisión y servicio suelen adaptarse mejor que quienes solo entregan resultados genéricos.' },
+    { q: '¿Qué herramienta de IA conviene aprender primero?', a: 'La que sirva para el servicio que quieres ofrecer. Empieza con planes gratuitos, practica con un proyecto real y luego decide si vale la pena pagar.' }
+  ],
+  sources: [
+    { t: 'INDAUTOR — Derechos de autor en México', url: 'https://www.gob.mx/indautor' },
+    { t: 'INAI — Protección de datos personales', url: 'https://home.inai.org.mx' }
+  ]
+},
+{
+  slug: 'calcular-precio-de-un-producto', catKey: 'emprende', cat: 'Emprendimiento',
+  title: 'Cómo calcular el precio de un producto para ganar dinero y no trabajar gratis',
+  seoTitle: 'Cómo calcular el precio de un producto paso a paso | SuperPromo',
+  description: 'Fórmulas para calcular el precio de venta: costos directos, mano de obra, gastos fijos, comisiones e impuestos. Diferencia entre markup y margen, con ejemplos resueltos.',
+  excerpt: 'Costos, mano de obra, gastos fijos y comisiones en una fórmula. Y por qué un markup de 50% no es un margen de 50%.',
+  coverText: '% vs %', keywords: ['cómo calcular el precio de un producto', 'precio de venta fórmula', 'margen vs markup', 'calcular ganancia de un producto'],
+  published: '2026-10-24', checked: '2026-10-24',
+  body: [
+    { p: 'Para calcular el precio de un producto sin trabajar gratis, suma el costo de materiales, el valor de tu tiempo y la parte proporcional de tus gastos fijos para obtener el costo total por pieza; después aplica el margen que quieres ganar con esta fórmula: precio = costo total ÷ (1 − margen deseado). Finalmente, agrega comisiones de pago o plataforma y compara con el mercado.' },
+    { p: 'En esta guía verás cada parte del cálculo, la diferencia entre markup y margen, y tres ejemplos resueltos.' },
+    { h2: 'Paso 1: costos directos por pieza' },
+    { p: 'Son los materiales y gastos que existen solo porque hiciste esa pieza: insumos, empaque, etiqueta y envío si lo pagas tú. Divide el costo de cada material entre las piezas que rinde.' },
+    { h2: 'Paso 2: tu mano de obra' },
+    { p: 'El error más común es no cobrar el propio tiempo. Define cuánto vale tu hora y multiplícalo por el tiempo que te toma cada pieza. Si quieres ganar $12,000 al mes trabajando 100 horas, tu hora vale $120.' },
+    { h2: 'Paso 3: gastos fijos prorrateados' },
+    { p: 'Luz, gas, internet, publicidad, herramientas y transporte existen aunque vendas poco. Súmalos por mes y divídelos entre las piezas que esperas vender en el mes.' },
+    { h2: 'Paso 4: margen y precio' },
+    { p: 'Con el costo total por pieza, aplica la fórmula de margen. Si el costo total es $100 y quieres un margen de 30%, el precio es $100 ÷ 0.70 = $142.86.' },
+    { h2: 'Markup vs margen: no son lo mismo' },
+    { p: 'El markup es el porcentaje que agregas sobre el costo. El margen es el porcentaje del precio de venta que es ganancia. Un markup de 50% sobre $100 da un precio de $150, pero el margen es $50 ÷ $150 = 33.3%, no 50%.' },
+    { table: { head: ['Markup sobre costo', 'Precio si el costo es $100', 'Margen real'], rows: [
+      ['25%', '$125', '20%'], ['50%', '$150', '33.3%'], ['100%', '$200', '50%'], ['150%', '$250', '60%']
+    ] } },
+    { h2: 'Paso 5: comisiones e impuestos' },
+    { p: 'Si cobras con terminal, plataforma o marketplace, una parte del precio se queda ahí. Para que la comisión no se coma tu margen, súmala al calcular: precio final = precio sin comisión ÷ (1 − porcentaje de comisión). Si vendes con factura, considera el IVA y consulta con un contador cómo aplica a tu régimen.' },
+    { h2: 'Ejemplo 1: velas aromáticas' },
+    { table: { head: ['Concepto', 'Cálculo', 'Monto'], rows: [
+      ['Materiales (cera, mecha, esencia, frasco)', 'Por pieza', '$48'], ['Empaque y etiqueta', 'Por pieza', '$7'],
+      ['Mano de obra', '20 minutos a $120 la hora', '$40'], ['Gastos fijos', '$1,200 al mes ÷ 80 velas', '$15'],
+      ['Costo total', '', '$110'], ['Precio con margen de 25%', '$110 ÷ 0.75', '$146.67'],
+      ['Precio con comisión de 4%', '$146.67 ÷ 0.96', '$152.78']
+    ] } },
+    { p: 'Precio sugerido: $155. Si en tu mercado las velas similares se venden en $120, necesitas reducir costos, producir más rápido o diferenciar tu producto para justificar el precio.' },
+    { h2: 'Ejemplo 2: servicio de diseño' },
+    { p: 'Un paquete de 12 publicaciones te toma 8 horas. A $200 por hora son $1,600 de mano de obra; tus herramientas cuestan $300 al mes y atiendes a 4 clientes, así que asignas $75. Costo total: $1,675. Con margen de 20%: $1,675 ÷ 0.80 = $2,093.75. Precio sugerido: $2,100 al mes.' },
+    { h2: 'Ejemplo 3: reventa' },
+    { p: 'Compras un producto en $300 y lo vendes en un marketplace con comisión de 15% y envío que pagas tú de $90. Si quieres un margen de 20% sobre el precio, el precio debe cubrir: precio × (1 − 0.15 − 0.20) = $390. Precio = $390 ÷ 0.65 = $600. Si el mercado no paga $600, el producto no deja el margen que buscas.' },
+    { h2: 'Revisa el precio contra el mercado' },
+    { ul: ['Si tu precio es mucho mayor que la competencia, revisa costos o explica tu diferencia.', 'Si es mucho menor, puede que estés olvidando costos o regalando tu trabajo.', 'Precios terminados en 9 o 5 pueden facilitar la decisión, pero no compensan un mal cálculo.'] },
+    { tip: 'Recalcula tu precio cada tres meses o cuando suba algún insumo. Un precio que funcionaba en enero puede dejarte sin margen en junio.' },
+    { links: ['negocios-con-menos-de-5000-pesos', 'antes-de-revender-cuentas-costos', 'que-vender-desde-casa-ideas', 'conseguir-clientes-freelance'] }
+  ],
+  faq: [
+    { q: '¿Cuál es la fórmula para calcular el precio de venta?', a: 'Precio = costo total por pieza ÷ (1 − margen deseado). El costo total incluye materiales, mano de obra y gastos fijos prorrateados.' },
+    { q: '¿Qué diferencia hay entre markup y margen?', a: 'El markup se calcula sobre el costo y el margen sobre el precio de venta. Un markup de 50% equivale a un margen de 33.3%.' },
+    { q: '¿Qué margen de ganancia es bueno?', a: 'Depende del sector. Productos artesanales suelen buscar márgenes más altos por el tiempo invertido; la reventa suele operar con márgenes menores y más volumen.' },
+    { q: '¿Debo incluir mi tiempo en el precio?', a: 'Sí. Si no lo incluyes, estás trabajando gratis y el negocio no será sostenible cuando quieras crecer o delegar.' },
+    { q: '¿Cómo incluyo el IVA en mi precio?', a: 'Si estás obligado a cobrar IVA, normalmente se suma al precio. Las reglas dependen de tu régimen fiscal; consulta con un contador o la información del SAT.' }
+  ],
+  sources: [
+    { t: 'SAT — IVA y regímenes fiscales', url: 'https://www.sat.gob.mx' },
+    { t: 'CONDUSEF — Educación financiera para emprendedores', url: 'https://www.condusef.gob.mx' }
+  ]
+}
+];
