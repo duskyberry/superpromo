@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="dark">
+<style id="sp-boot">html,body{background:#000!important;margin:0}body{animation:spPageIn .7s cubic-bezier(.2,.7,.2,1) both}@keyframes spPageIn{from{opacity:0}to{opacity:1}}@media (prefers-reduced-motion:reduce){body{animation:none}}</style>
+<link rel="icon" type="image/png" href="assets/brand/sp-mark.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>El Test de la Perfumería: descubre qué perfume va contigo | SuperPromo</title>
+<meta name="description" content="¿Eres de aromas frescos, dulces o misteriosos? Responde 15 preguntas divertidas, descubre tu personalidad olfativa y encuentra tres perfumes para ti.">
+<meta property="og:title" content="El Test de la Perfumería | SuperPromo">
+<meta property="og:description" content="15 preguntas para descubrir qué perfume va contigo. Tu personalidad nos dirá a qué hueles.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.superpromo.online/assets/brand/og-perfumeria.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="800">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&amp;family=Caveat:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#FB02AA;color:#F1F1F1;font-family:'Poppins',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*,*::before,*::after{box-sizing:border-box}
+img{display:block;max-width:100%}
+a{color:#FB02AA;text-decoration:none} a:hover{color:#FF5BC8}
+button,input{font-family:inherit}
+:focus-visible{outline:2px solid #FC6302;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@keyframes spRingSpin{to{transform:rotate(360deg)}}@media (prefers-reduced-motion:reduce){[style*="spRingSpin"]{animation:none!important}}</style>
+</helmet>
+<header style="border-bottom:1px solid #262626">
+  <div style="max-width:960px;margin:0 auto;padding:0 20px;height:64px;display:flex;align-items:center;gap:12px">
+    <a href="SuperPromo.dc.html" aria-label="SuperPromo, ir al inicio" style="display:flex;align-items:center;gap:10px;color:#F1F1F1">
+      <img src="assets/brand/sp-mark.png" alt="" width="36" height="36" style="width:36px;height:36px">
+    </a>
+    <span style="margin-left:auto;font-size:11px;font-weight:700;letter-spacing:.14em;color:#000;background:#FC6302;padding:5px 10px;border-radius:999px">TEST</span>
+    <a href="SuperPromo.dc.html" style="height:44px;display:flex;align-items:center;padding:0 18px;border-radius:999px;border:1px solid #343434;background:#111;color:#F1F1F1;font-size:13px;font-weight:700;letter-spacing:.04em;white-space:nowrap" style-hover="color:#fff;border-color:#FB02AA">VOLVER AL INICIO</a>
+  </div>
+</header>
+<main style="min-height:70vh;background:linear-gradient(160deg,#FB02AA 0%,#FC6302 100%);padding:clamp(16px,4vw,40px) clamp(12px,4vw,32px) 56px">
+  <div style="max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+    
+    <section style="background:#000;border-radius:28px;padding:clamp(22px,5vw,44px);display:flex;flex-direction:column;gap:22px">
+
+      <sc-if value="{{ isIntro }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div style="display:grid;grid-template-columns:repeat(4,clamp(61px,8.3vw,80px));gap:12px;justify-content:center;margin:0 auto">
+            <span style="position:relative;display:block;aspect-ratio:1 / 1;padding:2.5px;border-radius:14px;overflow:hidden"><span aria-hidden="true" style="position:absolute;left:-50%;top:-50%;width:200%;height:200%;background:conic-gradient(from 0deg,#FB02AA,#FC6302,#FB02AA,#FC6302,#FB02AA);animation:spRingSpin 7s linear 0s infinite"></span><img src="assets/perfumeria/ducha-f.png" alt="" width="80" height="80" style="position:relative;display:block;width:100%;height:100%;object-fit:cover;object-position:50% 12%;border-radius:11.5px;background:#000"></span>
+            <span style="position:relative;display:block;aspect-ratio:1 / 1;padding:2.5px;border-radius:14px;overflow:hidden"><span aria-hidden="true" style="position:absolute;left:-50%;top:-50%;width:200%;height:200%;background:conic-gradient(from 0deg,#FB02AA,#FC6302,#FB02AA,#FC6302,#FB02AA);animation:spRingSpin 7s linear -1.5s infinite"></span><img src="assets/perfumeria/citrico-m.png" alt="" width="80" height="80" style="position:relative;display:block;width:100%;height:100%;object-fit:cover;object-position:50% 12%;border-radius:11.5px;background:#000"></span>
+            <span style="position:relative;display:block;aspect-ratio:1 / 1;padding:2.5px;border-radius:14px;overflow:hidden"><span aria-hidden="true" style="position:absolute;left:-50%;top:-50%;width:200%;height:200%;background:conic-gradient(from 0deg,#FB02AA,#FC6302,#FB02AA,#FC6302,#FB02AA);animation:spRingSpin 7s linear -3s infinite"></span><img src="assets/perfumeria/misterio-f.png" alt="" width="80" height="80" style="position:relative;display:block;width:100%;height:100%;object-fit:cover;object-position:50% 12%;border-radius:11.5px;background:#000"></span>
+            <span style="position:relative;display:block;aspect-ratio:1 / 1;padding:2.5px;border-radius:14px;overflow:hidden"><span aria-hidden="true" style="position:absolute;left:-50%;top:-50%;width:200%;height:200%;background:conic-gradient(from 0deg,#FB02AA,#FC6302,#FB02AA,#FC6302,#FB02AA);animation:spRingSpin 7s linear -4.5s infinite"></span><img src="assets/perfumeria/rebelde-m.png" alt="" width="80" height="80" style="position:relative;display:block;width:100%;height:100%;object-fit:cover;object-position:50% 12%;border-radius:11.5px;background:#000"></span>
+          </div>
+          <p style="margin:0;font-size:12px;font-weight:700;letter-spacing:.14em;color:#FC6302">15 PREGUNTAS · 2 MINUTOS</p>
+          <h1 style="margin:0;font-size:clamp(34px,7vw,56px);font-weight:900;line-height:.95;letter-spacing:-0.03em">EL TEST DE LA <span style="background:linear-gradient(90deg,#FB02AA,#FC6302);-webkit-background-clip:text;background-clip:text;color:transparent">PERFUMERÍA</span></h1>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:#C9C9C9;text-wrap:pretty">Hay personas que huelen a recién salido de la ducha, otras a cita inolvidable y otras a que tienen un secreto que no piensan contarte. ¿Tú a qué hueles?</p>
+          <label style="display:flex;flex-direction:column;gap:8px">
+            <span style="font-size:13px;font-weight:600;color:#A6A6A6">Tu nombre o apodo</span>
+            <input value="{{ name }}" onInput="{{ onName }}" maxlength="24" required aria-required="true" aria-invalid="{{ nameErr }}" style="height:52px;border-radius:14px;border:1px solid {{ nameBorder }};background:#111;color:#F1F1F1;padding:0 16px;font-size:16px">
+          </label>
+          <sc-if value="{{ nameErr }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:-8px 0 0;font-size:12px;color:#FB02AA">Escribe tu nombre o un apodo para continuar.</p></sc-if>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span style="font-size:13px;font-weight:600;color:#A6A6A6">¿Cómo quieres tu resultado?</span>
+            <div role="radiogroup" aria-label="Sexo" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px">
+              <sc-for list="{{ sexOpts }}" as="o" hint-placeholder-count="3">
+                <button type="button" role="radio" aria-checked="{{ o.on }}" onClick="{{ o.pick }}" style="min-height:48px;border-radius:14px;border:1px solid {{ o.border }};background:{{ o.bg }};color:{{ o.color }};font-size:14px;font-weight:600;cursor:pointer;padding:8px">{{ o.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <button type="button" onClick="{{ start }}" style="height:56px;border:0;border-radius:999px;background:linear-gradient(90deg,#FB02AA,#FC6302);color:#000;font-size:15px;font-weight:800;letter-spacing:.06em;cursor:pointer">DESCUBRIR MI PERFUME</button>
+          <p style="margin:0;font-size:12px;color:#7A7A7A;text-align:center">Es un test de entretenimiento. Tus respuestas no salen de tu navegador.</p>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isQuiz }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;color:#A6A6A6"><span>Pregunta {{ qNum }} de 15</span><button type="button" onClick="{{ restart }}" style="border:0;background:none;color:#A6A6A6;font-size:13px;cursor:pointer;padding:0">Reiniciar</button></div>
+            <div role="progressbar" aria-valuemin="0" aria-valuemax="15" aria-valuenow="{{ qNum }}" style="height:6px;border-radius:999px;background:#1E1E1E;overflow:hidden"><div style="height:100%;width:{{ progress }};background:linear-gradient(90deg,#FB02AA,#FC6302);transition:width .3s ease"></div></div>
+          </div>
+          <h2 style="margin:0;font-size:clamp(22px,4.6vw,32px);font-weight:800;line-height:1.15;letter-spacing:-0.02em;text-wrap:pretty">{{ q.text }}</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px">
+            <sc-for list="{{ opts }}" as="o" hint-placeholder-count="4">
+              <button type="button" aria-pressed="{{ o.on }}" onClick="{{ o.pick }}" style="min-height:72px;text-align:left;display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;border:2px solid {{ o.border }};background:{{ o.bg }};color:#F1F1F1;font-size:15px;font-weight:500;line-height:1.35;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span style="font-size:26px;flex-shrink:0">{{ o.icon }}</span><span>{{ o.text }}</span></button>
+            </sc-for>
+          </div>
+          <div style="display:flex">
+            <button type="button" onClick="{{ back }}" style="align-self:flex-start;height:48px;padding:0 24px;border-radius:999px;border:1px solid #2A2A2A;background:#111;color:#F1F1F1;font-size:14px;font-weight:600;cursor:pointer">Anterior</button>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isResult }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:22px">
+          <p style="margin:0;font-size:12px;font-weight:700;letter-spacing:.14em;color:#FC6302">TU PERSONALIDAD OLFATIVA</p>
+          <h1 style="margin:0;font-size:clamp(28px,6vw,46px);font-weight:900;line-height:1;letter-spacing:-0.03em;text-wrap:balance">{{ r.headline }}</h1>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;align-items:start">
+            <div style="border-radius:20px;overflow:hidden;background:#111;aspect-ratio:9/16">
+              <sc-if value="{{ cardUrl }}" hint-placeholder-val="{{ false }}"><img loading="lazy" src="{{ cardUrl }}" alt="{{ r.cardAlt }}" width="1080" height="1920" style="width:100%;height:100%;object-fit:cover"></sc-if>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:14px">
+              <p style="margin:0;font-family:'Caveat',cursive;font-size:30px;line-height:1.1;color:#FB02AA">“{{ r.quote }}”</p>
+              <p style="margin:0;font-size:15px;line-height:1.65;color:#C9C9C9">{{ r.desc }}</p>
+              <div style="padding:14px 16px;border-radius:16px;background:#111;border:1px solid #232323">
+                <p style="margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:.12em;color:#A6A6A6">FAMILIA RECOMENDADA</p>
+                <p style="margin:0;font-size:15px;font-weight:600">{{ r.family }}</p>
+                <p style="margin:6px 0 0;font-size:13px;line-height:1.55;color:#A6A6A6">{{ r.why }}</p>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <button type="button" onClick="{{ share }}" style="height:52px;border:0;border-radius:999px;background:linear-gradient(90deg,#FB02AA,#FC6302);color:#000;font-size:14px;font-weight:800;letter-spacing:.06em;cursor:pointer">COMPARTIR RESULTADO</button>
+                <button type="button" onClick="{{ download }}" style="height:48px;border-radius:999px;border:1px solid #2A2A2A;background:#111;color:#F1F1F1;font-size:13px;font-weight:700;letter-spacing:.06em;cursor:pointer">DESCARGAR MI CARD</button>
+                <button type="button" onClick="{{ restart }}" style="height:44px;border:0;background:none;color:#A6A6A6;font-size:13px;font-weight:600;cursor:pointer">Volver a hacer el test</button>
+                <sc-if value="{{ shareMsg }}" hint-placeholder-val="{{ false }}"><p role="status" style="margin:0;font-size:12px;color:#A6A6A6;text-align:center">{{ shareMsg }}</p></sc-if>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <h2 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em">Tus 3 perfumes</h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px">
+              <sc-for list="{{ r.products }}" as="p" hint-placeholder-count="3">
+                <div style="display:flex;flex-direction:column;border-radius:18px;background:#111;border:1px solid #232323;overflow:hidden">
+                  <div style="position:relative;background:#fff;aspect-ratio:1 / 1;overflow:hidden"><img src="{{ p.img }}" alt="{{ p.name }}" width="400" height="400" loading="lazy" style="position:absolute;top:15%;left:15%;width:70%;height:70%;object-fit:contain"></div>
+                  <div style="padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1">
+                    <p style="margin:0;font-size:11px;font-weight:700;letter-spacing:.1em;color:#A6A6A6">{{ p.brandUpper }}</p>
+                    <p style="margin:0;font-size:14px;font-weight:600;line-height:1.3">{{ p.short }}</p>
+                    <p style="margin:0;font-size:12px;line-height:1.5;color:#A6A6A6;flex:1">{{ p.blurb }}</p>
+                    <a href="{{ p.url }}" target="_blank" rel="noopener sponsored" onClick="{{ p.track }}" style="margin-top:6px;height:42px;display:flex;align-items:center;justify-content:center;border-radius:999px;background:#F1F1F1;color:#000;font-size:12px;font-weight:800;letter-spacing:.06em">DESCUBRIR PERFUME</a>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+        <section aria-labelledby="rec-blog" style="margin-top:clamp(48px,7vw,80px)">
+      <h2 id="rec-blog" style="margin:0 0 18px;font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-0.03em;color:#F1F1F1">Entradas recomendadas</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px">
+        <sc-for list="{{ pfRecBlog }}" as="b" hint-placeholder-count="3">
+          <a href="{{ b.href }}" style="display:flex;flex-direction:column;gap:12px;min-height:170px;padding:22px;border-radius:20px;background:#111;border:1px solid #262626;color:#F1F1F1;text-decoration:none" style-hover="color:#F1F1F1;border-color:#FB02AA">
+            <span style="font-size:11px;font-weight:700;letter-spacing:.12em;color:#FC6302">{{ b.catUpper }}</span>
+            <span style="font-size:18px;font-weight:700;line-height:1.3;letter-spacing:-0.01em;text-wrap:pretty;flex:1">{{ b.title }}</span>
+            <span style="font-size:13px;font-weight:600;color:#A6A6A6">Leer entrada</span>
+          </a>
+        </sc-for>
+      </div>
+    </section>
+        <section aria-labelledby="rec-test" style="margin-top:clamp(48px,7vw,80px)">
+      <h2 id="rec-test" style="margin:0 0 18px;font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-0.03em;color:#F1F1F1">¿Otro test?</h2>
+      <a href="Quiz.dc.html" style="position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:clamp(22px,3vw,32px);border-radius:24px;background:#FB02AA;color:#000;text-decoration:none" style-hover="color:#000">
+        <div aria-hidden="true" style="position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:#FC6302"></div>
+        <div style="position:relative;max-width:420px">
+          <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.16em;background:#000;color:#F1F1F1;padding:6px 12px;border-radius:999px">MONEY PERSONALITY</span>
+          <p style="margin:12px 0 0;font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1;letter-spacing:-0.03em">¿Qué tanto sabes ahorrar?</p>
+          <p style="margin:8px 0 16px;font-size:14px;line-height:1.5">12 preguntas para descubrir qué tipo de ahorrador eres.</p>
+          <span style="display:inline-flex;align-items:center;height:48px;padding:0 24px;border-radius:999px;background:#000;color:#F1F1F1;font-weight:800;font-size:13px;letter-spacing:.08em">REALIZAR TEST</span>
+        </div>
+        <img src="assets/mascots/ninja.png" alt="" width="436" height="443" loading="lazy" style="position:relative;width:120px;height:auto;filter:drop-shadow(0 14px 18px rgba(0,0,0,.28))">
+      </a>
+    </section>
+      </sc-if>
+
+    <section aria-labelledby="inv-title" style="max-width:720px;margin:clamp(40px,6vw,72px) auto clamp(40px,6vw,72px);width:calc(100% - 32px);box-sizing:border-box;background:#000;border-radius:28px;padding:clamp(28px,4vw,40px) clamp(16px,4vw,32px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px">
+  <h2 id="inv-title" style="margin:0;font-size:clamp(22px,3vw,32px);font-weight:800;letter-spacing:-0.03em;color:#F1F1F1;text-wrap:balance">Invita a alguien a realizar este test</h2>
+  <button type="button" onClick="{{ invite }}" style="height:52px;padding:0 34px;border:0;border-radius:999px;background:linear-gradient(90deg,#FB02AA,#FC6302);color:#000;font-size:14px;font-weight:800;letter-spacing:.08em;cursor:pointer" style-hover="filter:brightness(1.08)">INVITAR</button>
+  <sc-if value="{{ inviteMsg }}" hint-placeholder-val="{{ false }}"><p role="status" style="margin:0;font-size:13px;color:#A6A6A6">{{ inviteMsg }}</p></sc-if>
+</section>
+    </section>
+  </div>
+</main>
+
+<footer style="background:#0A0A0A;border-top:1px solid #1C1C1C">
+  <div style="max-width:1320px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,40px) 32px">
+    <div style="display:flex;flex-wrap:wrap;gap:40px clamp(32px,6vw,96px);justify-content:space-between">
+      <div style="flex:1 1 300px;max-width:420px">
+        <img src="assets/brand/sp-logo.png" alt="SuperPromo" width="900" height="630" loading="lazy" style="width:min(260px,70vw);height:auto">
+        <p style="margin:20px 0 0;color:#A6A6A6;font-size:14px;line-height:1.65">Ofertas seleccionadas, comparaciones claras y una comunidad que comparte lo que vale la pena. Hecho en México.</p>
+        <div style="margin-top:22px;display:flex;gap:10px;flex-wrap:wrap">
+          <a href="https://chat.whatsapp.com/L5nBzKX1CcNCQRZPG4LQ64?mode=gi_t" target="_blank" rel="noopener noreferrer" aria-label="Comunidad SuperPromo en WhatsApp" style="width:44px;height:44px;display:grid;place-items:center;border-radius:999px;background:#FB02AA;color:#000" style-hover="color:#000;background:#FF2DBA">
+            <svg width="20" height="20" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" fill="currentColor"></path></svg>
+          </a>
+          <a href="{{ igUrl }}" target="_blank" rel="noopener noreferrer" aria-label="SuperPromo en Instagram" style="width:44px;height:44px;display:grid;place-items:center;border-radius:999px;background:#FB02AA;color:#000" style-hover="color:#000;background:#FF2DBA">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2.2"></rect><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2.2"></circle><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"></circle></svg>
+          </a>
+          <a href="{{ fbUrl }}" target="_blank" rel="noopener noreferrer" aria-label="SuperPromo en Facebook" style="width:44px;height:44px;display:grid;place-items:center;border-radius:999px;background:#FB02AA;color:#000" style-hover="color:#000;background:#FF2DBA">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V7c0-.7.4-1 1-1h2V2.5h-3C11.4 2.5 10 4.2 10 6.6v1.9H7.5V12H10v9.5h4V12h2.7l.5-3.5z" fill="currentColor"></path></svg>
+          </a>
+        </div>
+      </div>
+      <nav aria-label="Pie de página" style="flex:2 1 480px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:28px">
+        <div>
+          <p style="margin:0 0 14px;font-size:11px;font-weight:600;letter-spacing:.14em;color:#FC6302">COMPRAR</p>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:14px">
+            <li><a href="SuperPromo.dc.html#lo-mas-buscado" style="color:#D6D6D6" style-hover="color:#fff">Lo más buscado</a></li>
+            <li><a href="SuperPromo.dc.html#marcas" style="color:#D6D6D6" style-hover="color:#fff">Marcas</a></li>
+            <li><a href="SuperPromo.dc.html#destacados" style="color:#D6D6D6" style-hover="color:#fff">Destacados</a></li>
+            <li><a href="SuperPromo.dc.html#comparar" style="color:#D6D6D6" style-hover="color:#fff">Comparador</a></li>
+            <li><a href="SuperPromo.dc.html#perfumeria" style="color:#D6D6D6" style-hover="color:#fff">Perfumería</a></li>
+          </ul>
+        </div>
+        <div>
+          <p style="margin:0 0 14px;font-size:11px;font-weight:600;letter-spacing:.14em;color:#FC6302">INTERACTIVO</p>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:14px">
+            <li><a href="SuperPromo.dc.html#calculadora-msi" style="color:#D6D6D6" style-hover="color:#fff">Calculadora MSI</a></li>
+            <li><a href="Quiz.dc.html" style="color:#D6D6D6" style-hover="color:#fff">Test de personalidad</a></li>
+            <li><a href="Test Perfumeria.dc.html" style="color:#D6D6D6" style-hover="color:#fff">Test de la perfumería</a></li>
+          </ul>
+        </div>
+        <div>
+          <p style="margin:0 0 14px;font-size:11px;font-weight:600;letter-spacing:.14em;color:#FC6302">APRENDER</p>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:14px">
+            <li><a href="SuperPromo.dc.html#negocios-y-reventa" style="color:#D6D6D6" style-hover="color:#fff">Negocios y reventa</a></li>
+            <li><a href="SuperPromo.dc.html#recursos" style="color:#D6D6D6" style-hover="color:#fff">Recursos</a></li>
+            <li><a href="SuperPromo.dc.html#blog" style="color:#D6D6D6" style-hover="color:#fff">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <p style="margin:0 0 14px;font-size:11px;font-weight:600;letter-spacing:.14em;color:#FC6302">SUPERPROMO</p>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:14px">
+            <li><a href="SuperPromo.dc.html#quienes-somos" style="color:#D6D6D6" style-hover="color:#fff">Quiénes somos</a></li>
+            <li><a href="SuperPromo.dc.html#contacto" style="color:#D6D6D6" style-hover="color:#fff">Contacto</a></li>
+            <li><a href="SuperPromo.dc.html#privacidad" style="color:#D6D6D6" style-hover="color:#fff">Aviso de privacidad</a></li>
+            <li><a href="SuperPromo.dc.html#terminos" style="color:#D6D6D6" style-hover="color:#fff">Términos y condiciones</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    
+    <div style="margin-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:12px;color:#6E6E6E">
+      <span>© {{ year }} SuperPromo · México</span>
+      <span>Precios en MXN, IVA incluido según la publicación de cada tienda.</span>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const PROFILES = {
+  ducha: { n: 'Recién salido de la ducha', c: '#38BDF8', quote: 'Tu presencia no hace ruido, pero se nota cuando no estás.', desc: 'Transmites tranquilidad, confianza y naturalidad. Te encantan las sábanas recién cambiadas y la sensación de limpieza sin esfuerzo.', fam: 'Limpia, jabonosa y acuática', why: 'Los aromas limpios y ligeramente cítricos acompañan sin invadir: se sienten como piel recién bañada.', m: ['ck-be', 'natura-kaiak-100', 'ck-eternity-men'], f: ['ck-everyone-200', 'clinique-happy', 'dg-light-blue-capri'] },
+  citrico: { n: 'Cítrico irresistible', c: '#FACC15', quote: 'Llegas y el plan más sencillo se vuelve memorable.', desc: 'Eres pura energía: espontaneidad, optimismo y cero ganas de quedarte quieto.', fam: 'Cítrica', why: 'Limón, bergamota y mandarina despiertan y combinan con tu ritmo.', m: ['azzaro-chrome-200', 'armaf-mandarin-sky-elixir-100', 'cr7-origins-set'], f: ['clinique-happy', 'dg-light-blue-capri', 'benetton-cold-100'] },
+  dulce: { n: 'Dulce abrazo', c: '#FB02AA', quote: 'Eres ese lugar seguro al que todos quieren volver.', desc: 'Cariño, risas y un lado irresistible de consentirte. Contigo todo se siente más cálido.', fam: 'Dulce y gourmand', why: 'La vainilla y las notas dulces se sienten cercanas y reconfortantes, como tú.', m: ['rabanne-1-million-100', '212-vip-men-100', 'dg-devotion-homme'], f: ['ariana-cloud-intense-100', 'ariana-mod-vanilla-100', 'ariana-sweet-like-candy-set'] },
+  misterio: { n: 'Misterio de medianoche', c: '#8B5CF6', quote: 'No cuentas toda tu historia en la primera cita.', desc: 'Reservado, observador e intenso. Tu presencia deja más preguntas que respuestas.', fam: 'Oriental y amaderada', why: 'Maderas, ámbar y especias tienen profundidad: se descubren poco a poco.', m: ['halloween-man-x-125', 'lattafa-habik-100', 'kenzo-homme-edp-110'], f: ['lancome-nuit-tresor', 'ck-one-shock-her', 'ariana-rem-100'] },
+  elegancia: { n: 'Elegancia silenciosa', c: '#D6D3D1', quote: 'El buen gusto no necesita anunciarse.', desc: 'Refinado, discreto y seguro. Eliges los detalles con calma y tu estilo habla por ti.', fam: 'Floral elegante y amaderada suave', why: 'Composiciones pulidas que se notan de cerca y nunca de más.', m: ['polo-67-edt', 'cr7-legacy-100', 'guess-1981-men-100'], f: ['prada-la-femme-100', 'boss-femme', 'lbel-fleur-50'] },
+  aventurero: { n: 'Espíritu aventurero', c: '#22C55E', quote: 'La rutina te queda chica.', desc: 'Curioso, independiente y siempre con un destino nuevo en mente.', fam: 'Aromática y amaderada', why: 'Hierbas, maderas y acordes verdes huelen a aire libre y camino.', m: ['versace-dylan-blue-100', 'cr7-fearless-100', 'benetton-colors-man-black'], f: ['ck-be', 'benetton-cold-100', 'clinique-happy'] },
+  oceanica: { n: 'Frescura oceánica', c: '#06B6D4', quote: 'Contigo todo se siente más ligero.', desc: 'Relajado, sociable y fan de los días despejados. Transmites calma sin aburrir.', fam: 'Acuática y marina', why: 'Las notas frescas y marinas recuerdan brisa, sal y libertad.', m: ['rabanne-invictus-100', 'natura-kaiak-100', 'cr7-play-it-cool-100'], f: ['dg-light-blue-capri', 'benetton-cold-100', 'ck-everyone-200'] },
+  romantico: { n: 'Romántico empedernido', c: '#F43F5E', quote: 'Las buenas historias empiezan con detalles.', desc: 'Sensible y detallista. Recuerdas los pequeños gestos y valoras las conexiones de verdad.', fam: 'Floral', why: 'Las flores y la dulzura suave se sienten delicadas y memorables.', m: ['dg-pour-homme-125', 'cr7-original-100', 'ck-eternity-men'], f: ['ariana-god-is-a-woman-100', 'lbel-mithyka-50ml', 'moschino-toy-2-pearl'] },
+  solar: { n: 'Energía solar', c: '#FC6302', quote: 'No buscas ser el centro de atención, pero terminas siéndolo.', desc: 'Extrovertido, alegre y magnético. Iluminas cualquier reunión.', fam: 'Frutal y cítrica luminosa', why: 'Las frutas y los cítricos brillantes tienen la misma vibra que tú.', m: ['armaf-mandarin-sky-vintage-100', 'lacoste-booster-125', 'cr7-game-on-100'], f: ['lacoste-l1212-rose-sparkling', 'dkny-ice-pop-berry', 'ariana-moonlight-100'] },
+  minimalista: { n: 'Minimalista sofisticado', c: '#A3A3A3', quote: 'Menos ruido, más intención.', desc: 'Práctico, moderno y organizado. Eliges pocas cosas, pero cada una tiene sentido.', fam: 'Aromática limpia', why: 'Aromas limpios y sencillos que funcionan en cualquier lugar.', m: ['boss-bottled-unlimited-100', 'hugo-dark-blue', 'lbel-bleu-supreme'], f: ['ck-everyone-200', 'ck-be', 'boss-femme'] },
+  rebelde: { n: 'Rebelde magnético', c: '#EF4444', quote: 'No necesitas permiso para ser tú.', desc: 'Atrevido, original y seguro. Sigues tu propio criterio, no las tendencias.', fam: 'Intensa y contrastante', why: 'Los perfumes con carácter dejan huella y no pasan desapercibidos.', m: ['rabanne-phantom-intense-100', 'moschino-uomo', 'versace-blue-jeans'], f: ['ck-one-shock-her', 'ariana-thank-u-next-set', 'dkny-ice-pop-cherry'] }
+};
+const ORDER = ['ducha', 'citrico', 'dulce', 'misterio', 'elegancia', 'aventurero', 'oceanica', 'romantico', 'solar', 'minimalista', 'rebelde'];
+const Q = [
+  { t: 'Vas a la playa. ¿Qué te preparas?', o: [['🍃', 'Un mojito. Que comience la aventura.', { aventurero: 2, citrico: 1 }], ['🍋', 'Una limonada bien fría.', { citrico: 2, ducha: 1 }], ['🍺', 'Una cerveza helada.', { oceanica: 2, solar: 1 }], ['🍍', 'Una piña colada. Yo vine a vivir.', { dulce: 2, solar: 1 }]] },
+  { t: 'Seamos honestos: ¿cuándo te bañas?', o: [['🌅', 'Por la mañana. Hay que empezar fresco.', { ducha: 2, minimalista: 1 }], ['🌙', 'Por la noche. A dormir como persona decente.', { misterio: 1, elegancia: 1 }], ['🚿', 'En ambos momentos. La frescura no se negocia.', { ducha: 2, oceanica: 1 }], ['🤷', '¿Baño? ¿Eso con qué se come? (es broma… ¿verdad?)', { rebelde: 2, aventurero: 1 }]] },
+  { t: '¿Qué regalo te hace más feliz?', o: [['🍫', 'Una caja de chocolates.', { dulce: 2, romantico: 1 }], ['🧸', 'Un oso de peluche abrazable.', { romantico: 2, dulce: 1 }], ['🌶️', 'Unas gomitas enchiladas.', { rebelde: 2, citrico: 1 }], ['🥤', 'Un refresco bien helado.', { solar: 1, oceanica: 1 }]] },
+  { t: '¿Team noche o team día?', o: [['☀️', 'Team día, hasta que se ponga el sol.', { solar: 2, citrico: 1 }], ['🌃', 'Team noche, ahí empieza lo bueno.', { misterio: 2, rebelde: 1 }], ['🌇', 'Team atardecer, lo mejor de los dos.', { romantico: 2, oceanica: 1 }], ['⏰', 'Team “depende de lo que haya que hacer”.', { minimalista: 2, elegancia: 1 }]] },
+  { t: '¿Team calor o team frío?', o: [['🔥', 'Calor, playa y sandalias.', { oceanica: 2, solar: 1 }], ['❄️', 'Frío, suéter y cobija.', { dulce: 2, misterio: 1 }], ['🌤️', 'Templado, ni muy muy ni tan tan.', { elegancia: 1, minimalista: 1, ducha: 1 }], ['🌧️', 'Lluvia y café, por favor.', { misterio: 1, romantico: 1 }]] },
+  { t: '¿Qué plan elegirías para un viernes perfecto?', o: [['💃', 'Salir a bailar hasta que cierren.', { solar: 2, rebelde: 1 }], ['🍷', 'Cena tranquila en un lugar bonito.', { elegancia: 2, romantico: 1 }], ['🎬', 'Pijama, serie y botanas.', { dulce: 2, ducha: 1 }], ['🏕️', 'Agarrar carretera sin plan fijo.', { aventurero: 2, oceanica: 1 }]] },
+  { t: '¿Cómo te describirían tus amigos?', o: [['😂', 'El alma de la fiesta.', { solar: 2, citrico: 1 }], ['🤫', 'Misterioso, nunca se sabe qué piensa.', { misterio: 2, elegancia: 1 }], ['🤗', 'El que siempre está para todos.', { dulce: 2, romantico: 1 }], ['😎', 'El que hace lo que quiere.', { rebelde: 2, aventurero: 1 }]] },
+  { t: '¿En qué ambiente te sientes más a gusto?', o: [['🌊', 'Frente al mar.', { oceanica: 2, ducha: 1 }], ['🏙️', 'En la ciudad, con todo cerca.', { minimalista: 2, elegancia: 1 }], ['🌲', 'En el bosque o la montaña.', { aventurero: 2, ducha: 1 }], ['🕯️', 'En casa, con velas y música.', { romantico: 2, misterio: 1 }]] },
+  { t: '¿Qué cumplido te gustaría recibir?', o: [['✨', '“Siempre hueles delicioso.”', { dulce: 1, ducha: 1, romantico: 1 }], ['👔', '“Qué buen gusto tienes.”', { elegancia: 2, minimalista: 1 }], ['⚡', '“Contigo nunca me aburro.”', { citrico: 2, solar: 1 }], ['🖤', '“Eres diferente a todos.”', { rebelde: 2, misterio: 1 }]] },
+  { t: '¿Cómo es tu estilo para vestir?', o: [['👕', 'Básicos blancos y negros.', { minimalista: 2, ducha: 1 }], ['🧥', 'Chamarra de cuero y botas.', { rebelde: 2, misterio: 1 }], ['🌺', 'Colores y estampados.', { solar: 2, citrico: 1 }], ['🥾', 'Cómodo para cualquier aventura.', { aventurero: 2, oceanica: 1 }]] },
+  { t: '¿A dónde te escaparías unos días?', o: [['🏝️', 'Tulum o Holbox.', { oceanica: 2, solar: 1 }], ['🇫🇷', 'París, obvio.', { elegancia: 2, romantico: 1 }], ['⛰️', 'La Huasteca o la Sierra Gorda.', { aventurero: 2, citrico: 1 }], ['🗽', 'Nueva York, de noche.', { misterio: 1, minimalista: 1, rebelde: 1 }]] },
+  { t: '¿Qué te gustaría transmitir al entrar a un lugar?', o: [['😌', 'Calma y confianza.', { ducha: 2, oceanica: 1 }], ['🔥', 'Que todos volteen.', { rebelde: 1, solar: 1, misterio: 1 }], ['💗', 'Calidez y cercanía.', { dulce: 2, romantico: 1 }], ['💎', 'Clase sin decir una palabra.', { elegancia: 2, minimalista: 1 }]] },
+  { t: '¿Qué haces cuando necesitas recargar energía?', o: [['🏃', 'Salgo a correr o al gym.', { citrico: 2, aventurero: 1 }], ['🛁', 'Un baño largo y skincare.', { ducha: 2, dulce: 1 }], ['🎧', 'Audífonos y nadie me habla.', { misterio: 2, minimalista: 1 }], ['👯', 'Veo a mis amigos.', { solar: 2, romantico: 1 }]] },
+  { t: 'Elige una combinación.', o: [['🌿', 'Sol, brisa y pasto recién cortado.', { aventurero: 1, citrico: 1, ducha: 1 }], ['🌌', 'Noche, lluvia y luces de neón.', { misterio: 1, rebelde: 2 }], ['🌸', 'Primavera, flores y un día tranquilo.', { romantico: 2, elegancia: 1 }], ['🏖️', 'Calor, mar y arena.', { oceanica: 2, solar: 1 }]] },
+  { t: '¿Cuál de estas frases se parece más a ti?', o: [['🧼', '“Lo simple siempre funciona.”', { minimalista: 2, ducha: 1 }], ['🍬', '“La vida es mejor con postre.”', { dulce: 2, solar: 1 }], ['🗺️', '“Si no lo intento, nunca sabré.”', { aventurero: 2, rebelde: 1 }], ['🌹', '“Todo se trata de los detalles.”', { romantico: 1, elegancia: 2 }]] }
+];
+const ILL = (k, sx) => 'assets/perfumeria/' + k + '-' + (sx === 'm' ? 'm' : 'f') + '.png';
+const track = (ev, params) => { try { if (window.gtag) window.gtag('event', ev, params || {}); } catch (e) {} };
+
+class Component extends DCLogic {
+  state = { step: 'intro', name: '', sex: 'f', i: 0, ans: Array(15).fill(null), cardUrl: '', shareMsg: '', catalog: null };
+  _busy = false;
+  componentDidMount() {
+    this._rs = () => this.setState({ w: window.innerWidth }); window.addEventListener('resize', this._rs); this._rs();
+    try { const s = JSON.parse(sessionStorage.getItem('sp-perf-test') || 'null'); if (s && Array.isArray(s.ans)) this.setState({ ...s, cardUrl: '', shareMsg: '' }, () => { if (this.state.step === 'result') this.makeCard(); }); } catch (e) {}
+    this._catP = this.loadCatalog();
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this._rs); }
+  componentDidUpdate() {
+    const { step, name, sex, i, ans } = this.state;
+    try { sessionStorage.setItem('sp-perf-test', JSON.stringify({ step, name, sex, i, ans })); } catch (e) {}
+  }
+  async loadCatalog() {
+    try {
+      const txt = await (await fetch('SuperPromo.dc.html')).text();
+      const re = /\{ id: '([^']+)', cat: 'fragancias',([\s\S]*?)\},\n/g; const cat = {}; let m;
+      while ((m = re.exec(txt))) { const b = m[2]; const g = k => { const r = b.match(new RegExp(k + ": (\"[^\"]*\"|'[^']*')")); return r ? r[1].slice(1, -1) : ''; }; cat[m[1]] = { id: m[1], brand: g('brand'), short: g('short'), name: g('name'), img: g('img'), url: g('url'), blurb: g('blurb') }; }
+      this.setState({ catalog: cat });
+    } catch (e) { this.setState({ catalog: {} }); }
+  }
+  score() {
+    const s = {}; ORDER.forEach(k => s[k] = 0);
+    this.state.ans.forEach((a, qi) => { if (a == null) return; const pts = Q[qi].o[a][2]; for (const k in pts) s[k] += pts[k]; });
+    // Desempate: pregunta 15, luego pregunta 12, luego orden fijo
+    const tieQ = [14, 11];
+    return ORDER.slice().sort((a, b) => {
+      if (s[b] !== s[a]) return s[b] - s[a];
+      for (const qi of tieQ) { const an = this.state.ans[qi]; if (an == null) continue; const p = Q[qi].o[an][2]; const d = (p[b] || 0) - (p[a] || 0); if (d) return d; }
+      return ORDER.indexOf(a) - ORDER.indexOf(b);
+    })[0];
+  }
+  pickProducts(k) {
+    const P = PROFILES[k], sx = this.state.sex, cat = this.state.catalog || {};
+    const ids = sx === 'm' ? P.m : sx === 'f' ? P.f : [P.f[0], P.m[0], P.f[1]];
+    return ids.map(id => cat[id]).filter(Boolean);
+  }
+  headline(k) {
+    const n = this.state.name.trim();
+    return (n ? n.toUpperCase() + ' ES' : 'SOY') + ' TEAM ' + PROFILES[k].n.toUpperCase();
+  }
+  async makeCard() {
+    const k = this.score(), P = PROFILES[k], W = 1080, H = 1920, sx = this.state.sex;
+    try {
+      if (this._catP) await this._catP;
+      await Promise.all([document.fonts.load('900 80px Poppins'), document.fonts.load('700 40px Poppins'), document.fonts.load('700 60px Caveat')]);
+      const load = src => new Promise((res, rej) => { const im = new Image(); im.onload = () => res(im); im.onerror = rej; im.src = src; });
+      const cv = document.createElement('canvas'); cv.width = W; cv.height = H; const x = cv.getContext('2d');
+      const gr = (x0, x1) => { const g = x.createLinearGradient(x0, 0, x1, 0); g.addColorStop(0, '#FB02AA'); g.addColorStop(1, '#FC6302'); return g; };
+      const wrap = (t, max) => { const out = []; let cur = ''; t.split(' ').forEach(w => { const n = cur ? cur + ' ' + w : w; if (x.measureText(n).width > max && cur) { out.push(cur); cur = w; } else cur = n; }); out.push(cur); return out; };
+      x.fillStyle = '#0A0A0A'; x.fillRect(0, 0, W, H);
+      x.fillStyle = 'rgba(38,38,38,.6)'; [[960, 300, 420], [60, 1220, 340], [900, 1720, 260]].forEach(([cx, cy, r]) => { x.beginPath(); x.arc(cx, cy, r, 0, Math.PI * 2); x.fill(); });
+      x.fillStyle = gr(0, W); x.fillRect(0, H - 14, W, 14);
+      const mark = await load('assets/brand/sp-mark.png'); x.drawImage(mark, 90, 100, 96, 96);
+      x.textAlign = 'right'; x.font = '900 40px Poppins'; x.fillStyle = gr(560, 990); x.fillText('EL TEST DE LA', 990, 140); x.fillText('PERFUMERÍA', 990, 186);
+      const imgs = sx === 'n' ? [await load(ILL(k, 'f')), await load(ILL(k, 'm'))] : [await load(ILL(k, sx))];
+      const iw = imgs.length === 2 ? 250 : 340, ih = Math.round(iw * 1.2), gap = 24, tot = imgs.length * iw + (imgs.length - 1) * gap, iy = 290;
+      imgs.forEach((im, j) => {
+        const ix = (W - tot) / 2 + j * (iw + gap);
+        x.save(); x.beginPath(); x.roundRect(ix, iy, iw, ih, 36); x.clip();
+        const r = Math.max(iw / im.width, ih / im.height), dw = im.width * r, dh = im.height * r; x.drawImage(im, ix + (iw - dw) / 2, iy, dw, dh); x.restore();
+        x.lineWidth = 5; x.strokeStyle = P.c; x.beginPath(); x.roundRect(ix, iy, iw, ih, 36); x.stroke();
+      });
+      x.textAlign = 'center'; let fs = 60, ql;
+      do { x.font = '700 ' + fs + 'px Caveat'; ql = wrap('“' + P.quote + '”', 800); fs -= 4; } while (ql.length > 2 && fs > 30);
+      x.fillStyle = '#F1F1F1'; ql.forEach((l, j) => x.fillText(l, W / 2, iy + ih + 80 + j * (fs + 10)));
+      let y = iy + ih + 90 + ql.length * (fs + 10) + 30;
+      const n = this.state.name.trim();
+      x.fillStyle = '#F1F1F1'; x.font = '800 44px Poppins'; x.fillText((n ? n.toUpperCase().slice(0, 20) : 'YO') + ' HUELE A:', W / 2, y);
+      let nf = 92; x.font = '900 ' + nf + 'px Poppins'; let nl = wrap(P.n.toUpperCase(), W - 160);
+      if (nl.length > 2) { nf = 76; x.font = '900 ' + nf + 'px Poppins'; nl = wrap(P.n.toUpperCase(), W - 160); }
+      nl.forEach(l => { y += nf; x.fillStyle = gr(80, W - 80); x.fillText(l, W / 2, y); });
+      y += 100; x.fillStyle = '#A6A6A6'; x.font = '700 28px Poppins'; x.fillText('TUS 3 PERFUMES IDEALES SON:', W / 2, y);
+      y += 24;
+      this.pickProducts(k).forEach((p, j) => {
+        y += 74; x.save(); x.fillStyle = '#161616'; x.beginPath(); x.roundRect(110, y - 52, W - 220, 64, 32); x.fill(); x.restore();
+        x.textAlign = 'left'; x.fillStyle = gr(130, 180); x.font = '900 32px Poppins'; x.fillText(String(j + 1), 146, y - 8);
+        x.fillStyle = '#F1F1F1'; x.font = '600 30px Poppins'; let t = p.brand + ' · ' + p.short; while (x.measureText(t).width > W - 340 && t.length > 4) t = t.slice(0, -2); if (t !== p.brand + ' · ' + p.short) t = t.trim() + '…';
+        x.fillText(t, 196, y - 8); x.textAlign = 'center';
+      });
+      y = Math.max(y + 130, H - 330);
+      x.fillStyle = '#F1F1F1'; x.font = '800 40px Poppins'; x.fillText('¿Y tú a qué hueles?', W / 2, y);
+      x.fillStyle = '#A6A6A6'; x.font = '500 30px Poppins'; x.fillText('Haz el test en', W / 2, y + 56);
+      x.fillStyle = '#FB02AA'; x.font = '800 34px Poppins'; x.fillText('www.superpromo.online', W / 2, y + 104);
+      cv.toBlob(b => { if (!b) return; if (this.state.cardUrl) URL.revokeObjectURL(this.state.cardUrl); this._blob = b; this.setState({ cardUrl: URL.createObjectURL(b) }); }, 'image/png');
+    } catch (e) { this.setState({ shareMsg: 'No pudimos generar la imagen. Intenta de nuevo.' }); }
+  }
+  restart = () => { track('perfumeria_test_restart'); try { sessionStorage.removeItem('sp-perf-test'); } catch (e) {} this.setState({ step: 'intro', i: 0, ans: Array(15).fill(null), cardUrl: '', shareMsg: '' }); };
+  renderVals() {
+    const s = this.state, sel = (on) => on ? { border: '#FB02AA', bg: '#1A0612', color: '#F1F1F1' } : { border: '#2A2A2A', bg: '#111', color: '#C9C9C9' };
+    const v = {
+      invite: async () => { const url = 'https://www.superpromo.online/Test%20Perfumeria.dc.html'; const text = '¿Y tú a qué hueles? Descubre tus 3 perfumes ideales con el test de SuperPromo:'; try { if (navigator.share) { await navigator.share({ title: 'SuperPromo', text, url }); return; } await navigator.clipboard.writeText(text + ' ' + url); this.setState({ inviteMsg: 'Copiamos el enlace. ¡Pégalo donde quieras!' }); } catch (e) {} },
+      inviteMsg: s.inviteMsg || '',
+      pfRecBlog: [{"slug":"como-saber-que-perfume-va-conmigo","title":"¿Cómo saber qué perfume va conmigo?","cat":"Hogar y estilo de vida","catUpper":"HOGAR Y ESTILO DE VIDA","href":"SuperPromo.dc.html#blog/como-saber-que-perfume-va-conmigo"},{"slug":"por-que-paco-rabanne-nunca-pasa-de-moda","title":"¿Por qué nunca pasa de moda Paco Rabanne?","cat":"Hogar y estilo de vida","catUpper":"HOGAR Y ESTILO DE VIDA","href":"SuperPromo.dc.html#blog/por-que-paco-rabanne-nunca-pasa-de-moda"},{"slug":"por-que-nautica-voyage-es-odiado-y-amado","title":"¿Por qué Nautica Voyage es tan odiado por muchos y amado por otros?","cat":"Hogar y estilo de vida","catUpper":"HOGAR Y ESTILO DE VIDA","href":"SuperPromo.dc.html#blog/por-que-nautica-voyage-es-odiado-y-amado"}],
+      isIntro: s.step === 'intro', isQuiz: s.step === 'quiz', isResult: s.step === 'result', name: s.name,
+      introIll: ['ducha-f', 'citrico-m', 'misterio-f', 'rebelde-m'].map(f => 'assets/perfumeria/' + f + '.png'),
+      onName: e => this.setState({ name: e.target.value.replace(/[<>]/g, ''), nameErr: false }),
+      sexOpts: [['m', 'Hombre'], ['f', 'Mujer'], ['n', 'Prefiero no decir']].map(([k, label]) => ({ label, on: String(s.sex === k), pick: () => this.setState({ sex: k }), ...sel(s.sex === k) })),
+      start: () => { if (!String(s.name || '').trim()) { this.setState({ nameErr: true }); return; } track('perfumeria_test_start'); this.setState({ step: 'quiz', i: 0, nameErr: false }); },
+      nameErr: !!s.nameErr, nameBorder: s.nameErr ? '#FB02AA' : '#2A2A2A',
+      restart: this.restart, cardUrl: s.cardUrl, shareMsg: s.shareMsg,
+      isDesk: (s.w || 1200) >= 1024, isMob: (s.w || 1200) < 1024, year: String(new Date().getFullYear()), igUrl: 'https://www.instagram.com/superpromo.mx/', fbUrl: 'https://www.facebook.com/superpromo.mx/'
+    };
+    if (s.step === 'quiz') {
+      const q = Q[s.i], a = s.ans[s.i];
+      Object.assign(v, {
+        qNum: s.i + 1, progress: ((s.i + (a != null ? 1 : 0)) / 15 * 100) + '%', q: { text: q.t },
+        opts: q.o.map((o, j) => ({ icon: o[0], text: o[1], on: String(a === j), pick: () => {
+          if (this._busy) return; this._busy = true;
+          const ans = this.state.ans.slice(), qi = this.state.i; ans[qi] = j; this.setState({ ans }); track('perfumeria_question_answer', { question: qi + 1 });
+          setTimeout(() => { this._busy = false; if (this.state.i !== qi || this.state.step !== 'quiz') return; if (qi < 14) this.setState({ i: qi + 1 }); else this.setState({ step: 'result', cardUrl: '' }, () => { this.makeCard(); track('perfumeria_test_complete', { result: this.score() }); }); }, 280);
+        }, ...sel(a === j) })),
+        back: () => s.i === 0 ? this.setState({ step: 'intro' }) : this.setState({ i: s.i - 1 }),
+      });
+    }
+    if (s.step === 'result') {
+      const k = this.score(), P = PROFILES[k];
+      v.r = {
+        headline: this.headline(k), quote: P.quote, desc: P.desc, family: P.fam, why: P.why, cardAlt: 'Tarjeta de resultado: ' + P.n,
+        products: this.pickProducts(k).map(p => ({ ...p, brandUpper: p.brand.toUpperCase(), track: () => track('perfumeria_product_click', { result: k, product_id: p.id }) }))
+      };
+      v.share = async () => {
+        track('perfumeria_result_share', { result: k });
+        const url = location.href.split('#')[0], text = 'Soy team ' + P.n + ' en El Test de la Perfumería de SuperPromo. ¿Tú a qué hueles?';
+        try {
+          if (this._blob && navigator.canShare) { const file = new File([this._blob], 'superpromo-perfumeria.png', { type: 'image/png' }); if (navigator.canShare({ files: [file] })) { await navigator.share({ files: [file], text, url }); return; } }
+          if (navigator.share) { await navigator.share({ text, url }); return; }
+          await navigator.clipboard.writeText(text + ' ' + url); this.setState({ shareMsg: 'Enlace copiado. También puedes descargar tu card.' });
+        } catch (e) {}
+      };
+      v.download = async () => { try { const blob = s.cardUrl ? await (await fetch(s.cardUrl)).blob() : null; if (!blob) return; const f = new File([blob], 'superpromo-perfumeria-' + k + '.png', { type: 'image/png' }); const mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && /Mac/.test(navigator.platform)); if (mobile && navigator.canShare && navigator.canShare({ files: [f] })) { await navigator.share({ files: [f] }); return; } const u = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = u; a.download = 'superpromo-perfumeria-' + k + '.png'; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(u), 4000); } catch (e) {} };
+    }
+    return v;
+  }
+}
+</script>
+</body>
+</html>

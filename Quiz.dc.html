@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="dark">
+<style id="sp-boot">html,body{background:#000!important;margin:0}body{animation:spPageIn .7s cubic-bezier(.2,.7,.2,1) both}@keyframes spPageIn{from{opacity:0}to{opacity:1}}@media (prefers-reduced-motion:reduce){body{animation:none}}</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Descubre tu Money Personality · Quiz de ahorro | SuperPromo</title>
+<meta name="description" content="Responde 12 preguntas y descubre qué tipo de ahorrador eres. Un quiz divertido y educativo con tarjeta para compartir en tus historias.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="SuperPromo">
+<meta property="og:title" content="¿Qué tanto sabes ahorrar? Descubre tu Money Personality">
+<meta property="og:description" content="12 preguntas, un personaje y una tarjeta para presumir (o para reírte). Hazlo en SuperPromo.">
+<meta property="og:image" content="https://www.superpromo.online/assets/brand/og-quiz.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="800">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" href="assets/brand/sp-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#111;color:#F1F1F1;font-family:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}
+*,*::before,*::after{box-sizing:border-box}
+img{display:block;max-width:100%}
+a{color:#FB02AA;text-decoration:none}a:hover{color:#FF5BC8}
+button,input{font-family:inherit}
+:focus-visible{outline:2px solid #FC6302;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</helmet>
+
+<header style="border-bottom:1px solid #262626">
+  <div style="max-width:960px;margin:0 auto;padding:0 20px;height:64px;display:flex;align-items:center;gap:12px">
+    <a href="SuperPromo.dc.html" aria-label="SuperPromo, ir al inicio" style="display:flex;align-items:center;gap:10px;color:#F1F1F1">
+      <img src="assets/brand/sp-mark.png" alt="" width="36" height="36" style="width:36px;height:36px">
+    </a>
+    <span style="margin-left:auto;font-size:11px;font-weight:700;letter-spacing:.14em;color:#000;background:#FC6302;padding:5px 10px;border-radius:999px">QUIZ</span>
+    <a href="SuperPromo.dc.html" style="height:44px;display:flex;align-items:center;padding:0 18px;border-radius:999px;border:1px solid #343434;background:#111;color:#F1F1F1;font-size:13px;font-weight:700;letter-spacing:.04em;white-space:nowrap" style-hover="color:#fff;border-color:#FB02AA">VOLVER AL INICIO</a>
+  </div>
+</header>
+
+<main style="max-width:760px;margin:0 auto;padding:clamp(24px,5vw,56px) 20px 80px;min-height:calc(100vh - 64px)">
+
+<sc-if value="{{ isIntro }}" hint-placeholder-val="{{ true }}">
+  <section aria-labelledby="q-title">
+    <div style="display:flex;align-items:flex-end;justify-content:center;gap:4px;margin-bottom:24px">
+      <img src="assets/mascots/hormiga.png" alt="" data-float="1" width="368" height="424" style="width:26%;max-width:140px;height:auto;transition:transform .2s ease-out">
+      <img src="assets/mascots/ninja.png" alt="" data-float="1" width="436" height="443" style="width:32%;max-width:180px;height:auto;transition:transform .2s ease-out">
+      <img src="assets/mascots/leyenda.png" alt="" data-float="1" width="417" height="418" style="width:26%;max-width:140px;height:auto;transition:transform .2s ease-out">
+    </div>
+    <p style="margin:0;text-align:center;font-size:12px;font-weight:700;letter-spacing:.16em;color:#FC6302">QUIZ INTERACTIVO · 12 PREGUNTAS</p>
+    <h1 id="q-title" style="margin:12px 0 0;text-align:center;font-size:clamp(36px,7vw,64px);font-weight:800;line-height:.95;letter-spacing:-0.045em;text-wrap:balance">Descubre tu <span style="color:#FB02AA">Money Personality</span></h1>
+    <p style="margin:16px auto 0;max-width:520px;text-align:center;font-size:16px;line-height:1.6;color:#C4C4C4">¿Tu dinero trabaja para ti o desaparece misteriosamente antes de la quincena? Responde las preguntas y descubre tu perfil.</p>
+    <form onSubmit="{{ start }}" novalidate="" style="margin:32px auto 0;max-width:480px;display:flex;flex-direction:column;gap:18px;background:#000;border:1px solid #232323;border-radius:24px;padding:clamp(18px,4vw,28px)">
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <label for="q-name" style="font-size:14px;font-weight:600">¿Cómo te llamamos?</label>
+        <input id="q-name" type="text" maxlength="24" autocomplete="given-name" value="{{ name }}" onChange="{{ onName }}" aria-describedby="q-name-e" aria-invalid="{{ nameInvalid }}" placeholder="Tu nombre o apodo" style="height:52px;padding:0 16px;border-radius:14px;border:1px solid {{ nameBorder }};background:#0A0A0A;color:#F1F1F1;font-size:17px" style-focus="border-color:#FB02AA;outline:none">
+        <span id="q-name-e" role="alert" style="font-size:12px;color:#FF6BC9;min-height:16px">{{ nameErr }}</span>
+      </div>
+      <fieldset style="border:0;margin:0;padding:0">
+        <legend style="font-size:14px;font-weight:600;margin-bottom:4px">¿Cómo prefieres que te hablemos?</legend>
+        <p style="margin:0 0 10px;font-size:12px;color:#8C8C8C">Solo ajusta la redacción. No cambia tu resultado.</p>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <sc-for list="{{ genders }}" as="g" hint-placeholder-count="3">
+            <button type="button" role="radio" aria-checked="{{ g.activeStr }}" onClick="{{ g.onPick }}" style="min-height:48px;padding:0 16px;border-radius:14px;border:1px solid {{ g.border }};background:{{ g.bg }};color:#F1F1F1;font-size:15px;font-weight:500;text-align:left;cursor:pointer;display:flex;align-items:center;gap:10px"><span style="width:18px;height:18px;border-radius:50%;border:2px solid {{ g.dot }};background:{{ g.fill }};flex-shrink:0"></span>{{ g.label }}</button>
+          </sc-for>
+        </div>
+      </fieldset>
+      <button type="submit" style="height:56px;border-radius:999px;border:0;background:#FB02AA;color:#000;font-weight:800;font-size:15px;letter-spacing:.06em;cursor:pointer" style-hover="background:#FF2DBA">COMENZAR QUIZ</button>
+      <p style="margin:0;font-size:12px;line-height:1.5;color:#8C8C8C;text-align:center">Es un quiz para divertirte y reflexionar, no una evaluación financiera profesional. Tus respuestas no salen de tu navegador.</p>
+    </form>
+  </section>
+</sc-if>
+
+<sc-if value="{{ isQuestion }}" hint-placeholder-val="{{ false }}">
+  <section aria-labelledby="q-current">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+      <button type="button" onClick="{{ back }}" style="height:40px;padding:0 14px;border-radius:999px;border:1px solid #343434;background:transparent;color:#D6D6D6;font-size:13px;cursor:pointer" style-hover="border-color:#FB02AA">Atrás</button>
+      <p style="margin:0;font-size:13px;font-weight:600;color:#A6A6A6">Pregunta {{ qNum }} de 12</p>
+    </div>
+    <div role="progressbar" aria-valuemin="0" aria-valuemax="12" aria-valuenow="{{ qNum }}" aria-label="Progreso del quiz" style="margin-top:14px;height:8px;border-radius:999px;background:#1E1E1E;overflow:hidden">
+      <div style="height:100%;width:{{ progress }};background:linear-gradient(90deg,#FB02AA,#FC6302);border-radius:999px;transition:width .3s ease"></div>
+    </div>
+    <h2 id="q-current" tabindex="-1" ref="{{ qRef }}" style="margin:32px 0 0;font-size:clamp(24px,4.4vw,36px);font-weight:700;line-height:1.15;letter-spacing:-0.02em;text-wrap:balance;outline:none">{{ question }}</h2>
+    <div role="radiogroup" aria-labelledby="q-current" style="margin-top:22px;display:flex;flex-direction:column;gap:10px">
+      <sc-for list="{{ options }}" as="o" hint-placeholder-count="4">
+        <button type="button" role="radio" aria-checked="{{ o.activeStr }}" onClick="{{ o.onPick }}" style="min-height:60px;padding:14px 18px;border-radius:18px;border:2px solid {{ o.border }};background:{{ o.bg }};color:#F1F1F1;font-size:16px;font-weight:500;line-height:1.4;text-align:left;cursor:pointer;display:flex;align-items:center;gap:14px;transition:border-color .15s ease" style-hover="border-color:#FB02AA"><span style="flex-shrink:0;width:30px;height:30px;border-radius:50%;background:{{ o.keyBg }};color:{{ o.keyColor }};font-size:13px;font-weight:800;display:grid;place-items:center">{{ o.key }}</span><span>{{ o.text }}</span></button>
+      </sc-for>
+    </div>
+  </section>
+</sc-if>
+
+<sc-if value="{{ isDone }}" hint-placeholder-val="{{ false }}">
+  <section aria-labelledby="done-title" style="text-align:center;padding-top:clamp(20px,6vw,60px)">
+    <img src="assets/mascots/relax.png" alt="" data-float="1" width="445" height="467" style="width:min(220px,50vw);height:auto;margin:0 auto">
+    <h2 id="done-title" tabindex="-1" ref="{{ qRef }}" style="margin:24px 0 0;font-size:clamp(34px,6vw,56px);font-weight:800;line-height:1;letter-spacing:-0.04em;outline:none">¡Ya tenemos tu resultado!</h2>
+    <p style="margin:14px auto 0;max-width:440px;font-size:16px;line-height:1.6;color:#C4C4C4">Tus respuestas están listas. ¿Descubrimos qué tan pro eres con tu dinero?</p>
+    <button type="button" onClick="{{ reveal }}" disabled="{{ busy }}" style="margin-top:28px;height:58px;padding:0 32px;border-radius:999px;border:0;background:#FB02AA;color:#000;font-weight:800;font-size:15px;letter-spacing:.08em;cursor:pointer" style-hover="background:#FF2DBA">{{ revealLabel }}</button>
+    <div style="margin-top:14px"><button type="button" onClick="{{ back }}" style="background:none;border:0;color:#A6A6A6;font-size:13px;text-decoration:underline;cursor:pointer">Cambiar mi última respuesta</button></div>
+  </section>
+</sc-if>
+
+<sc-if value="{{ isResult }}" hint-placeholder-val="{{ false }}">
+  <section aria-labelledby="res-title">
+    <h2 id="res-title" tabindex="-1" ref="{{ qRef }}" style="margin:0;text-align:center;font-size:clamp(26px,5vw,40px);font-weight:800;letter-spacing:-0.03em;outline:none">{{ resultHeading }}</h2>
+    <div style="margin:22px auto 0;width:min(100%,380px);aspect-ratio:9 / 16;border-radius:24px;overflow:hidden;background:#111;border:1px solid #262626;box-shadow:0 30px 80px rgba(0,0,0,.6)">
+      <sc-if value="{{ cardUrl }}" hint-placeholder-val="{{ false }}">
+        <img ref="{{ cardImgRef }}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ cardAlt }}" width="1080" height="1920" style="width:100%;height:100%">
+      </sc-if>
+      <sc-if value="{{ cardError }}" hint-placeholder-val="{{ false }}">
+        <div style="height:100%;display:grid;place-items:center;padding:24px;text-align:center;font-size:14px;color:#D6D6D6">No pudimos generar la imagen en este navegador. Tu resultado: {{ resultPlain }}</div>
+      </sc-if>
+    </div>
+    <div style="margin:22px auto 0;max-width:380px;display:flex;flex-direction:column;gap:10px">
+      <button type="button" onClick="{{ download }}" disabled="{{ noCard }}" style="height:54px;border-radius:999px;border:0;background:#FB02AA;color:#000;font-weight:800;font-size:14px;letter-spacing:.08em;cursor:pointer" style-hover="background:#FF2DBA">DESCARGAR MI CARD</button>
+      <button type="button" onClick="{{ share }}" style="height:54px;border-radius:999px;border:1px solid #4A4A4A;background:#111;color:#F1F1F1;font-weight:800;font-size:14px;letter-spacing:.08em;cursor:pointer" style-hover="border-color:#FB02AA">COMPARTIR RESULTADO</button>
+      <button type="button" onClick="{{ restart }}" style="height:48px;border-radius:999px;border:0;background:transparent;color:#D6D6D6;font-weight:600;font-size:13px;letter-spacing:.06em;cursor:pointer;text-decoration:underline">VOLVER A HACER EL QUIZ</button>
+      <p aria-live="polite" style="margin:0;min-height:18px;text-align:center;font-size:13px;color:#FC6302">{{ notice }}</p>
+    </div>
+    <div style="margin-top:32px;padding:clamp(20px,4vw,28px);border-radius:24px;background:#111;border:1px solid #232323">
+      <p style="margin:0;font-size:11px;font-weight:700;letter-spacing:.14em;color:#FC6302">TU SIGUIENTE PASO</p>
+      <p style="margin:10px 0 0;font-size:17px;line-height:1.6;color:#E6E6E6">{{ nextStep }}</p>
+      <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:10px">
+        <a href="SuperPromo.dc.html#calculadora-msi" style="height:44px;display:inline-flex;align-items:center;padding:0 18px;border-radius:999px;background:#F1F1F1;color:#000;font-size:13px;font-weight:700" style-hover="color:#000;background:#fff">Calculadora MSI</a>
+        <a href="{{ articleHref }}" style="height:44px;display:inline-flex;align-items:center;padding:0 18px;border-radius:999px;border:1px solid #343434;color:#F1F1F1;font-size:13px;font-weight:600" style-hover="color:#fff;border-color:#FB02AA">{{ articleLabel }}</a>
+      </div>
+      <p style="margin:18px 0 0;font-size:12px;line-height:1.5;color:#8C8C8C">Quiz de entretenimiento y reflexión. No es una prueba científica ni una evaluación financiera profesional.</p>
+    </div>
+  </section>
+  <div style="max-width:1120px;margin:0 auto;padding:0 20px 96px">
+    <section aria-labelledby="rec-prod" style="margin-top:clamp(48px,7vw,80px)">
+      <h2 id="rec-prod" style="margin:0 0 18px;font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-0.03em;color:#F1F1F1">Productos recomendados para tu perfil</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px">
+        <sc-for list="{{ recProducts }}" as="p" hint-placeholder-count="3">
+          <div style="display:flex;flex-direction:column;border-radius:20px;background:#111;border:1px solid #262626;overflow:hidden">
+            <div style="position:relative;background:#fff;aspect-ratio:1 / 1;overflow:hidden"><img src="{{ p.img }}" alt="{{ p.short }}" width="400" height="400" loading="lazy" style="position:absolute;top:15%;left:15%;width:70%;height:70%;object-fit:contain"></div>
+            <div style="padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1">
+              <p style="margin:0;font-size:11px;font-weight:700;letter-spacing:.1em;color:#A6A6A6">{{ p.brandUpper }}</p>
+              <p style="margin:0;font-size:15px;font-weight:600;line-height:1.3;color:#F1F1F1;flex:1">{{ p.short }}</p>
+              <a href="{{ p.url }}" target="_blank" rel="noopener sponsored" style="margin-top:4px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:999px;background:#FB02AA;color:#000;font-size:12px;font-weight:800;letter-spacing:.06em" style-hover="color:#000;background:#FF2DBA">DESCUBRIR MEJOR PRECIO</a>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+    <section aria-labelledby="rec-blog" style="margin-top:clamp(48px,7vw,80px)">
+      <h2 id="rec-blog" style="margin:0 0 18px;font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-0.03em;color:#F1F1F1">Entradas recomendadas</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px">
+        <sc-for list="{{ recBlog }}" as="b" hint-placeholder-count="3">
+          <a href="{{ b.href }}" style="display:flex;flex-direction:column;gap:12px;min-height:170px;padding:22px;border-radius:20px;background:#111;border:1px solid #262626;color:#F1F1F1;text-decoration:none" style-hover="color:#F1F1F1;border-color:#FB02AA">
+            <span style="font-size:11px;font-weight:700;letter-spacing:.12em;color:#FC6302">{{ b.catUpper }}</span>
+            <span style="font-size:18px;font-weight:700;line-height:1.3;letter-spacing:-0.01em;text-wrap:pretty;flex:1">{{ b.title }}</span>
+            <span style="font-size:13px;font-weight:600;color:#A6A6A6">Leer entrada</span>
+          </a>
+        </sc-for>
+      </div>
+    </section>
+    <section aria-labelledby="rec-test" style="margin-top:clamp(48px,7vw,80px)">
+      <h2 id="rec-test" style="margin:0 0 18px;font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-0.03em;color:#F1F1F1">¿Otro test?</h2>
+      <a href="Test Perfumeria.dc.html" style="position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:clamp(22px,3vw,32px);border-radius:24px;background:#F1F1F1;color:#000;text-decoration:none" style-hover="color:#000">
+        <div aria-hidden="true" style="position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:#E2E2E2"></div>
+        <div style="position:relative;max-width:420px">
+          <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.16em;background:#000;color:#F1F1F1;padding:6px 12px;border-radius:999px">LA PERFUMERÍA</span>
+          <p style="margin:12px 0 0;font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1;letter-spacing:-0.03em">¿A qué hueles tú?</p>
+          <p style="margin:8px 0 16px;font-size:14px;line-height:1.5;color:#3A3A3A">Descubre tu personalidad olfativa y tus 3 perfumes ideales.</p>
+          <span style="display:inline-flex;align-items:center;height:48px;padding:0 24px;border-radius:999px;background:linear-gradient(90deg,#FB02AA,#FC6302);color:#000;font-weight:800;font-size:13px;letter-spacing:.08em">REALIZAR TEST</span>
+        </div>
+        <span style="position:relative;display:flex;align-items:flex-end"><span style="display:block;padding:3px;border-radius:20px;background:linear-gradient(135deg,#FB02AA,#FC6302);transform:rotate(-6deg)"><span style="display:block;width:96px;aspect-ratio:1 / 1;border-radius:17px;overflow:hidden;background:#000"><img src="assets/perfumeria/misterio-f.png" alt="" loading="lazy" style="display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.16)"></span></span><span style="display:block;padding:3px;border-radius:20px;background:linear-gradient(135deg,#FB02AA,#FC6302);transform:rotate(6deg);margin-left:-16px;margin-bottom:12px"><span style="display:block;width:96px;aspect-ratio:1 / 1;border-radius:17px;overflow:hidden;background:#000"><img src="assets/perfumeria/rebelde-m.png" alt="" loading="lazy" style="display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.16)"></span></span></span>
+      </a>
+    </section>
+  </div>
+</sc-if>
+
+</main>
+<section aria-labelledby="inv-title" style="max-width:720px;margin:clamp(40px,6vw,72px) auto 0;padding:clamp(24px,4vw,36px) clamp(16px,4vw,32px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px">
+  <h2 id="inv-title" style="margin:0;font-size:clamp(22px,3vw,32px);font-weight:800;letter-spacing:-0.03em;color:#F1F1F1;text-wrap:balance">Invita a alguien a realizar este test</h2>
+  <button type="button" onClick="{{ invite }}" style="height:52px;padding:0 34px;border:0;border-radius:999px;background:linear-gradient(90deg,#FB02AA,#FC6302);color:#000;font-size:14px;font-weight:800;letter-spacing:.08em;cursor:pointer" style-hover="filter:brightness(1.08)">INVITAR</button>
+  <sc-if value="{{ inviteMsg }}" hint-placeholder-val="{{ false }}"><p role="status" style="margin:0;font-size:13px;color:#A6A6A6">{{ inviteMsg }}</p></sc-if>
+</section>
+<footer style="background:#0A0A0A;border-top:1px solid #1C1C1C">
+  <div style="max-width:1320px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,40px) 32px">
+    <div style="display:flex;flex-wrap:wrap;gap:40px clamp(32px,6vw,96px);justify-content:space-between">
+      <div style="flex:1 1 300px;max-width:420px">
+        <img src="assets/brand/sp-logo.png" alt="SuperPromo" width="900" height="630" loading="lazy" style="width:min(260px,70vw);height:auto">
+        <p style="margin:20px 0 0;color:#A6A6A6;font-size:14px;line-height:1.65">Ofertas seleccionadas, comparaciones claras y una comunidad que comparte lo que vale la pena. Hecho en México.</p>
+        <div style="margin-top:22px;display:flex;gap:10px;flex-wrap:wrap">
+          <a href="https://chat.whatsapp.com/L5nBzKX1CcNCQRZPG4LQ64?mode=gi_t" target="_blank" rel="noopener noreferrer" aria-label="Comunidad SuperPromo en WhatsApp" style="width:44px;height:44px;display:grid;place-items:center;border-radius:999px;background:#FB02AA;color:#000" style-hover="color:#000;background:#FF2DBA">
+            <svg width="20" height="20" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" fill="currentColor"></path></svg>
+          </a>
+          <a href="{{ igUrl }}" target="_blank" rel="noopener noreferrer" aria-label="SuperPromo en Instagram" style="width:44px;height:44px;display:grid;place-items:center;border-radius:999px;background:#FB02AA;color:#000" style-hover="color:#000;background:#FF2DBA">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2.2"></rect><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2.2"></circle><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"></circle></svg>
+          </a>
+          <a href="{{ fbUrl }}" target="_blank" rel="noopener noreferrer" aria-label="SuperPromo en Facebook" style="width:44px;height:44px;display:grid;place-items:center;border-radius:999px;background:#FB02AA;color:#000" style-hover="color:#000;background:#FF2DBA">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V7c0-.7.4-1 1-1h2V2.5h-3C11.4 2.5 10 4.2 10 6.6v1.9H7.5V12H10v9.5h4V12h2.7l.5-3.5z" fill="currentColor"></path></svg>
+          </a>
+        </div>
+      </div>
+      <nav aria-label="Pie de página" style="flex:2 1 480px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:28px">
+        <div>
+          <p style="margin:0 0 14px;font-size:11px;font-weight:600;letter-spacing:.14em;color:#FC6302">COMPRAR</p>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:14px">
+            <li><a href="SuperPromo.dc.html#lo-mas-buscado" style="color:#D6D6D6" style-hover="color:#fff">Lo más buscado</a></li>
+            <li><a href="SuperPromo.dc.html#marcas" style="color:#D6D6D6" style-hover="color:#fff">Marcas</a></li>
+            <li><a href="SuperPromo.dc.html#destacados" style="color:#D6D6D6" style-hover="color:#fff">Destacados</a></li>
+            <li><a href="SuperPromo.dc.html#comparar" style="color:#D6D6D6" style-hover="color:#fff">Comparador</a></li>
+            <li><a href="SuperPromo.dc.html#perfumeria" style="color:#D6D6D6" style-hover="color:#fff">Perfumería</a></li>
+          </ul>
+        </div>
+        <div>
+          <p style="margin:0 0 14px;font-size:11px;font-weight:600;letter-spacing:.14em;color:#FC6302">INTERACTIVO</p>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:14px">
+            <li><a href="SuperPromo.dc.html#calculadora-msi" style="color:#D6D6D6" style-hover="color:#fff">Calculadora MSI</a></li>
+            <li><a href="Quiz.dc.html" style="color:#D6D6D6" style-hover="color:#fff">Test de personalidad</a></li>
+            <li><a href="Test Perfumeria.dc.html" style="color:#D6D6D6" style-hover="color:#fff">Test de la perfumería</a></li>
+          </ul>
+        </div>
+        <div>
+          <p style="margin:0 0 14px;font-size:11px;font-weight:600;letter-spacing:.14em;color:#FC6302">APRENDER</p>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:14px">
+            <li><a href="SuperPromo.dc.html#negocios-y-reventa" style="color:#D6D6D6" style-hover="color:#fff">Negocios y reventa</a></li>
+            <li><a href="SuperPromo.dc.html#recursos" style="color:#D6D6D6" style-hover="color:#fff">Recursos</a></li>
+            <li><a href="SuperPromo.dc.html#blog" style="color:#D6D6D6" style-hover="color:#fff">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <p style="margin:0 0 14px;font-size:11px;font-weight:600;letter-spacing:.14em;color:#FC6302">SUPERPROMO</p>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:14px">
+            <li><a href="SuperPromo.dc.html#quienes-somos" style="color:#D6D6D6" style-hover="color:#fff">Quiénes somos</a></li>
+            <li><a href="SuperPromo.dc.html#contacto" style="color:#D6D6D6" style-hover="color:#fff">Contacto</a></li>
+            <li><a href="SuperPromo.dc.html#privacidad" style="color:#D6D6D6" style-hover="color:#fff">Aviso de privacidad</a></li>
+            <li><a href="SuperPromo.dc.html#terminos" style="color:#D6D6D6" style-hover="color:#fff">Términos y condiciones</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    
+    <div style="margin-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:12px;color:#6E6E6E">
+      <span>© {{ year }} SuperPromo · México</span>
+      <span>Precios en MXN, IVA incluido según la publicación de cada tienda.</span>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+// Etiqueta del pie de la tarjeta. Cámbiala por tu dominio cuando lo tengas.
+const SITE_LABEL = 'www.superpromo.online';
+const QUIZ_URL = 'Quiz.dc.html';
+const RECS = {"hormiga":{"b":[{"slug":"organizar-tu-quincena","title":"Cómo organizar tu quincena para que te alcance hasta el último día","cat":"Ingresos extra"},{"slug":"reducir-gastos-mensuales","title":"Cómo reducir tus gastos mensuales sin dejar de disfrutar la vida","cat":"Ingresos extra"},{"slug":"apps-para-ahorrar-al-comprar-mexico","title":"Las mejores apps para ahorrar dinero al comprar en México","cat":"Ahorro y compras"}],"p":[{"img":"assets/products/c/p191.png","brand":"Nutribullet","short":"Nutribullet 600 W","url":"https://meli.la/34aDSPD"},{"img":"assets/products/c/p12.png","brand":"CeraVe","short":"CeraVe FPS 50","url":"https://meli.la/16MJT6F"},{"img":"assets/products/c/p98.png","brand":"Skullcandy","short":"Skullcandy Kilo","url":"https://meli.la/1troKR3"}]},"tarjetazo":{"b":[{"slug":"meses-sin-intereses-cuando-convienen","title":"Cómo aprovechar los meses sin intereses sin terminar endeudado","cat":"Ahorro y compras"},{"slug":"pagar-deudas-tarjeta-de-credito","title":"Cómo pagar las deudas de tarjetas de crédito más rápido sin quedarte sin dinero","cat":"Finanzas personales"},{"slug":"mejor-momento-para-comprar-tecnologia","title":"¿Cuándo es el mejor momento para comprar celulares, laptops y electrodomésticos?","cat":"Finanzas personales"}],"p":[{"img":"assets/products/c/p192.png","brand":"Xiaomi","short":"Redmi Pad 2 9.7\"","url":"https://meli.la/1Yr2rE6"},{"img":"assets/products/c/p97.png","brand":"Skullcandy","short":"Push Play Active XT","url":"https://meli.la/1hQJNob"},{"img":"assets/products/c/p19.png","brand":"JBL","short":"JBL Charge 6","url":"https://meli.la/2xekk3L"}]},"relax":{"b":[{"slug":"ahorrar-10000-pesos-en-un-ano","title":"Cómo ahorrar $10,000 pesos en un año aunque ganes poco","cat":"Ahorro y compras"},{"slug":"metodos-efectivos-para-ahorrar","title":"Métodos efectivos para ahorrar: vende lo que ya no usas y compra eso que deseas","cat":"Ahorro y compras"},{"slug":"super-con-1000-pesos-semana","title":"Cómo hacer el súper con $1,000 pesos y comer toda la semana","cat":"Ahorro y compras"}],"p":[{"img":"assets/products/c/p39.png","brand":"Mabe","short":"Microondas Mabe 0.7","url":"https://meli.la/2EBC8jt"},{"img":"assets/products/c/p41.png","brand":"Zinus","short":"Almohada Zinus","url":"https://meli.la/2H3KLFb"},{"img":"assets/products/c/p99.png","brand":"Skullcandy","short":"Skullcandy Terrain 2","url":"https://meli.la/1fHiMat"}]},"ninja":{"b":[{"slug":"buen-fin-2026-ofertas-reales","title":"Buen Fin 2026: fechas, cómo encontrar ofertas reales y qué comprar","cat":"Ahorro y compras"},{"slug":"tarjetas-credito-cashback-mexico","title":"Qué tarjetas de crédito dan más cashback en México y cómo aprovecharlo","cat":"Ahorro y compras"},{"slug":"apps-para-ahorrar-al-comprar-mexico","title":"Las mejores apps para ahorrar dinero al comprar en México","cat":"Ahorro y compras"}],"p":[{"img":"assets/products/c/p78.png","brand":"Apple","short":"iPad A16","url":"https://meli.la/2zLyegu"},{"img":"assets/products/c/p95.png","brand":"Skullcandy","short":"Skullcandy Crusher Evo","url":"https://meli.la/2Wyan3V"},{"img":"assets/products/c/p19.png","brand":"JBL","short":"JBL Charge 6","url":"https://meli.la/2xekk3L"}]},"ceo":{"b":[{"slug":"empezar-a-invertir-con-poco-dinero","title":"Cómo empezar a invertir con $100, $500 o $1,000 pesos en México","cat":"Finanzas personales"},{"slug":"donde-guardar-tu-dinero-rendimientos","title":"¿Dónde guardar tu dinero para que genere rendimientos sin arriesgarlo de más?","cat":"Finanzas personales"},{"slug":"negocios-con-menos-de-5000-pesos","title":"10 negocios que puedes empezar con menos de $5,000 pesos","cat":"Emprendimiento"}],"p":[{"img":"assets/products/c/p36.png","brand":"Mercado Pago","short":"Point Smart 2","url":"https://meli.la/2jpKPTX"},{"img":"assets/products/c/p24.png","brand":"Genérica","short":"Impresora térmica 58 mm","url":"https://meli.la/319uhNo"},{"img":"assets/products/c/p79.png","brand":"Apple","short":"iPad mini 6","url":"https://meli.la/2MfBkgT"}]},"leyenda":{"b":[{"slug":"donde-guardar-tu-dinero-rendimientos","title":"¿Dónde guardar tu dinero para que genere rendimientos sin arriesgarlo de más?","cat":"Finanzas personales"},{"slug":"viajar-barato-por-mexico","title":"Cómo viajar barato por México: trucos para ahorrar en vuelos, hoteles y comida","cat":"Finanzas personales"},{"slug":"ecosistema-apple-que-vale-la-pena","title":"Ecosistema Apple: qué vale la pena tener","cat":"Tecnología, gadgets y gaming"}],"p":[{"img":"assets/products/c/p80.png","brand":"Apple","short":"iPad Pro M5","url":"https://meli.la/1SeEgwj"},{"img":"assets/products/c/p109.png","brand":"Bose","short":"Bose Revolve+ II","url":"https://meli.la/1vmu81N"},{"img":"assets/products/c/p76.png","brand":"Hisense","short":"Frigobar Hisense 3.3","url":"https://meli.la/2x1t2cE"}]}};
+
+// Puntos por respuesta, en el mismo orden de las opciones.
+const QUESTIONS = [
+  { q: '¿Sabes qué son los meses sin intereses (MSI)?', a: ['Sí: mensualidades fijas sin intereses adicionales si cumples las condiciones de la promoción.', 'Son pagos pequeños que siempre salen más baratos.', 'Es dinero extra que el banco te regala.', 'Más o menos… solo veo el número de mensualidades.'], p: [2, -1, -1, 0], tag: 'msi' },
+  { q: 'Llega la fecha de pago de tu tarjeta. ¿Qué sueles hacer?', a: ['Pago el total para evitar intereses, cuando me alcanza.', 'Pago más del mínimo, aunque no siempre el total.', 'Pago el mínimo porque es lo más fácil.', 'A veces se me pasa la fecha y pago tarde.'], p: [2, 1, -1, -2], tag: 'tarjeta' },
+  { q: 'Faltan dos días para la quincena, tienes $200 y muchísima hambre. ¿Qué haces?', a: ['Planeo comidas económicas para estirar el dinero.', 'Reviso lo que hay en casa y compro solo lo indispensable.', 'Pido comida porque ya no quiero pensar en eso.', 'Me lo gasto todo hoy y mañana vemos qué pasa.'], p: [2, 2, -1, -2], tag: 'gasto' },
+  { q: '¿Tienes un fondo para emergencias?', a: ['Sí, tengo un fondo separado para imprevistos.', 'Lo estoy construyendo poco a poco.', 'Tengo algunos ahorros, sin una cantidad definida.', 'Por ahora no tengo uno.'], p: [2, 1, 1, 0], tag: 'ahorro' },
+  { q: '¿Cuánto tiempo suele durarte el aguinaldo?', a: ['Lo reparto entre metas, ahorro y gastos planeados.', 'Me dura varias semanas porque planeo mis compras.', 'En pocos días ya se fue buena parte.', '¿Aguinaldo? Solo recuerdo haberlo recibido.'], p: [2, 1, -1, -1], tag: 'plan' },
+  { q: 'Encuentras algo con 50% de descuento que no pensabas comprar. ¿Qué haces?', a: ['Comparo precios y lo compro solo si de verdad lo necesito.', 'Investigo si el descuento es real.', 'Lo compro: una oferta así no se deja pasar.', 'Compro dos, porque están baratos.'], p: [2, 1, -1, -2], tag: 'impulso' },
+  { q: '¿Sabes cuánto gastas, más o menos, al mes?', a: ['Sí, llevo un presupuesto o registro.', 'Tengo una idea bastante clara.', 'Lo descubro cuando reviso mi saldo.', 'Prefiero no investigar el misterio.'], p: [2, 1, 0, -1], tag: 'registro' },
+  { q: 'Entre cafés, antojitos, apps y compras chiquitas, ¿qué pasa con tus gastos hormiga?', a: ['Los identifico y controlo cuánto me afectan.', 'Me doy gustos, pero reviso cuánto suman.', 'No los cuento: son cantidades pequeñas.', 'Mi dinero desaparece con efectos especiales.'], p: [2, 1, -1, -1], tag: 'hormiga' },
+  { q: 'Quieres un celular nuevo. ¿Qué haces primero?', a: ['Defino un presupuesto y comparo modelos y precios.', 'Espero una promoción y reviso opciones.', 'Veo cuál me gusta y luego pienso cómo pagarlo.', 'Si tiene mensualidades pequeñas, ya estoy dentro.'], p: [2, 1, -1, -2], tag: 'compra' },
+  { q: 'Te ofrecen una compra a 12 MSI. ¿Cómo decides si te conviene?', a: ['Reviso el costo total, mi presupuesto y las condiciones.', 'Compruebo que la mensualidad quepa en mi presupuesto.', 'Me fijo sobre todo en que no tenga intereses.', 'Acepto: pagar poquito al mes suena increíble.'], p: [2, 1, 0, -2], tag: 'msi' },
+  { q: 'Te llegan $1,000 inesperados. ¿Qué haces?', a: ['Los reparto según mis prioridades.', 'Guardo una parte y uso otra en algo que necesito.', 'Me doy un gusto y ahorro lo que sobre.', 'Abro el carrito de compras de inmediato.'], p: [2, 2, 0, -1], tag: 'plan' },
+  { q: '¿Tienes alguna meta de ahorro?', a: ['Sí, con una cantidad y un plazo definidos.', 'Tengo una meta, pero aún sin plan claro.', 'Me gustaría ahorrar, pero no he empezado.', 'Mi meta es llegar a la siguiente quincena con dignidad.'], p: [2, 1, 0, 0], tag: 'meta' }
+];
+const RAW_MIN = QUESTIONS.reduce((s, x) => s + Math.min(...x.p), 0);
+const RAW_MAX = QUESTIONS.reduce((s, x) => s + Math.max(...x.p), 0);
+// Mapeo lineal y determinista del total a la escala 1…10.
+function scoreFrom(answers) {
+  const raw = answers.reduce((s, a, i) => s + QUESTIONS[i].p[a], 0);
+  const v = Math.round(1 + (raw - RAW_MIN) / (RAW_MAX - RAW_MIN) * 9);
+  return Math.max(1, Math.min(10, v));
+}
+
+const ARCH = [
+  { min: 1, max: 2, id: 'hormiga', img: 'assets/mascots/hormiga.png', name: { m: 'Gastador Hormiga', f: 'Gastadora Hormiga', n: 'Modo Gasto Hormiga' }, color: '#FC6302',
+    desc: ['Tu dinero se va en pasitos chiquitos: un antojo aquí, una app allá. Nada grave… hasta que lo sumas.', 'Eres de las personas que viven el momento. El reto es que el momento no se coma toda la quincena.'],
+    mission: ['Anota tus gastos pequeños durante una semana. Solo mirarlos ya cambia el juego.', 'Elige un gasto hormiga y ponle tope semanal.'],
+    next: 'Prueba nuestra calculadora MSI y descubre cuánto pagarías realmente cada mes.', art: ['reducir-gastos-mensuales', 'Cómo reducir gastos sin sufrir'] },
+  { min: 3, max: 4, id: 'tarjetazo', img: 'assets/mascots/tarjetazo.png', name: { m: 'Tarjetazo Emocional', f: 'Tarjetazo Emocional', n: 'Tarjetazo Emocional' }, color: '#FB02AA',
+    desc: ['Las ofertas te hablan bonito y tú contestas con la tarjeta. Cero juicio: solo falta una pausa antes de pagar.', 'Tienes buen gusto y poca paciencia con los carritos llenos. Una regla simple puede cambiarlo todo.'],
+    mission: ['Antes de comprar algo no planeado, espera 48 horas.', 'Suma tus mensualidades activas antes de aceptar otra.'],
+    next: 'Antes de comprar, compara el costo total y revisa tu presupuesto.', art: ['meses-sin-intereses-cuando-convienen', 'MSI sin endeudarte'] },
+  { min: 5, max: 6, id: 'relax', img: 'assets/mascots/relax.png', name: { m: 'Ahorrador Relax', f: 'Ahorradora Relax', n: 'Modo Ahorro Relax' }, color: '#FC6302',
+    desc: ['Tienes buenas bases y no te complicas. Con un poquito más de constancia, tu dinero te va a dar sorpresas.', 'Sabes lo que conviene, aunque a veces lo dejas para después. Vas por buen camino.'],
+    mission: ['Convierte tu intención en una meta con monto y fecha.', 'Programa un ahorro automático el día que cobras.'],
+    next: 'Convierte tus buenas intenciones en una meta concreta.', art: ['ahorrar-10000-pesos-en-un-ano', 'Plan para ahorrar $10,000'] },
+  { min: 7, max: 8, id: 'ninja', img: 'assets/mascots/ninja.png', name: { m: 'Cazador de Ofertas Ninja', f: 'Cazadora de Ofertas Ninja', n: 'Radar de Ofertas Ninja' }, color: '#FB02AA',
+    desc: ['Tu radar de ofertas está activado. Comparas, investigas y sabes esperar el momento adecuado.', 'No te dejas llevar por el «último día de promoción». Compras con estrategia.'],
+    mission: ['No compres algo solo porque está en descuento.', 'Revisa siempre el costo total con envío y condiciones.'],
+    next: 'Sigue comparando precios y revisa las condiciones de cada promoción.', art: ['buen-fin-2026-ofertas-reales', 'Detecta ofertas reales'] },
+  { min: 9, max: 9, id: 'ceo', img: 'assets/mascots/ceo.png', name: { m: 'CEO de su Quincena', f: 'CEO de su Quincena', n: 'CEO de su Quincena' }, color: '#FB02AA',
+    desc: ['Tu quincena tiene plan, presupuesto y hasta junta de consejo. Se nota que te tomas en serio tu dinero.', 'Planeas, comparas y cumples tus metas. Tu yo del futuro te manda saludos.'],
+    mission: ['Revisa si tu dinero ahorrado ya está generando rendimientos.', 'Afina tu fondo de emergencia hasta cubrir tres meses de gastos.'],
+    next: 'Sigue afinando tus objetivos y tu planificación.', art: ['empezar-a-invertir-con-poco-dinero', 'Empieza a invertir'] },
+  { min: 10, max: 10, id: 'leyenda', img: 'assets/mascots/leyenda.png', name: { m: 'Leyenda del Ahorro', f: 'Leyenda del Ahorro', n: 'Leyenda del Ahorro' }, color: '#FC6302',
+    desc: ['Puntaje perfecto en este quiz. Tus hábitos con el dinero son de colección.', 'Comparas, planeas, ahorras y no caes en trampas. Nivel leyenda desbloqueado.'],
+    mission: ['Comparte lo que sabes: tus amigos necesitan a alguien como tú.', 'Ponte una meta nueva y más ambiciosa.'],
+    next: 'Comparte tu resultado e invita a tus amigos a descubrir el suyo.', art: ['donde-guardar-tu-dinero-rendimientos', 'Dónde guardar tu dinero'] }
+];
+const archFor = s => ARCH.find(a => s >= a.min && s <= a.max) || (s < 1 ? ARCH[0] : ARCH[ARCH.length - 1]);
+// Variante determinista según patrones de respuesta.
+function variant(answers) {
+  const weak = answers.map((a, i) => ({ i, p: QUESTIONS[i].p[a] })).sort((x, y) => x.p - y.p || x.i - y.i)[0];
+  return { desc: answers[0] === 0 ? 0 : 1, mission: ['msi', 'tarjeta', 'impulso', 'compra'].includes(QUESTIONS[weak.i].tag) ? 1 : 0 };
+}
+const KEY = 'sp_quiz_v1';
+
+class Component extends DCLogic {
+  cardImgRef = React.createRef();
+  state = (() => { let s = null; try { s = JSON.parse(sessionStorage.getItem(KEY) || 'null'); } catch (e) {} return s || { step: 'intro', name: '', gender: 'n', answers: [], qi: 0, nameErr: '' }; })();
+  qRef = React.createRef();
+  componentDidMount() {
+    if (!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      this._floatFn = () => { const y = window.scrollY; document.querySelectorAll('[data-float]').forEach((el, i) => { const f = Number(el.getAttribute('data-float')) || 1; el.style.transform = 'translateY(' + (Math.sin(y / 140 + i * 1.7) * 10 * f).toFixed(1) + 'px) rotate(' + (Math.sin(y / 220 + i) * 3 * f).toFixed(2) + 'deg)'; }); };
+      window.addEventListener('scroll', this._floatFn, { passive: true }); requestAnimationFrame(this._floatFn);
+    }
+    this._img = {}; ARCH.forEach(a => { const i = new Image(); i.src = a.img; this._img[a.id] = i; });
+    this._mark = new Image(); this._mark.src = 'assets/brand/sp-mark.png';
+    if (this.state.step === 'result') this.setState({ step: 'done' });
+  }
+  syncCardImg() { const el = this.cardImgRef && this.cardImgRef.current; if (el && this.state.cardUrl && el.src !== this.state.cardUrl) el.src = this.state.cardUrl; }
+  componentDidUpdate(_, p) { this.syncCardImg();
+    const { step, name, gender, answers, qi } = this.state;
+    try { sessionStorage.setItem(KEY, JSON.stringify({ step: step === 'result' ? 'done' : step, name, gender, answers, qi })); } catch (e) {}
+    if (p.step !== step || p.qi !== qi) { window.scrollTo(0, 0); requestAnimationFrame(() => this.qRef.current && this.qRef.current.focus({ preventScroll: true })); }
+  }
+  pick(ai) {
+    if (this._lock) return; this._lock = true;
+    const answers = this.state.answers.slice(0, this.state.qi); answers[this.state.qi] = ai;
+    this.setState({ answers });
+    setTimeout(() => { this._lock = false; this.setState(s => s.qi >= 11 ? { step: 'done' } : { qi: s.qi + 1 }); }, 220);
+  }
+  async reveal() {
+    if (this.state.busy) return;
+    this.setState({ busy: true });
+    const score = scoreFrom(this.state.answers), arch = archFor(score);
+    try { const blob = await this.renderCard(score, arch); if (this._url) URL.revokeObjectURL(this._url); this._url = URL.createObjectURL(blob); this._blob = blob; this.setState({ step: 'result', busy: false, cardUrl: this._url, cardError: false }); }
+    catch (e) { console.warn('card', e && e.message); this.setState({ step: 'result', busy: false, cardUrl: '', cardError: true }); }
+  }
+  displayName() { return (this.state.name || '').trim().replace(/\s+/g, ' '); }
+  async renderCard(score, arch) {
+    try { await Promise.all([document.fonts.load('800 100px Poppins'), document.fonts.load('600 40px Poppins'), document.fonts.load('500 40px Poppins')]); } catch (e) {}
+    const img = this._img[arch.id], mark = this._mark;
+    await Promise.all([img, mark].map(i => i.complete && i.naturalWidth ? 0 : new Promise((r, j) => { i.onload = r; i.onerror = j; })));
+    const W = 1080, H = 1920, c = document.createElement('canvas'); c.width = W; c.height = H; const g = c.getContext('2d');
+    const F = (w, s) => w + ' ' + s + 'px Poppins, system-ui, sans-serif';
+    const fit = (t, w, s, max) => { let z = s; g.font = F(w, z); while (g.measureText(t).width > max && z > 30) { z -= 2; g.font = F(w, z); } return z; };
+    const wrap = (t, max) => { const out = []; let line = ''; for (const wd of t.split(' ')) { const tt = line ? line + ' ' + wd : wd; if (g.measureText(tt).width > max && line) { out.push(line); line = wd; } else line = tt; } if (line) out.push(line); return out; };
+    const rr = (x, y, w, h, r) => { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); };
+    // Zona segura: 200px arriba y abajo para la interfaz de historias.
+    g.fillStyle = '#1E1E1E'; g.fillRect(0, 0, W, H);
+    g.fillStyle = '#FB02AA'; g.beginPath(); g.arc(W + 60, 640, 440, 0, Math.PI * 2); g.fill();
+    g.fillStyle = '#FC6302'; g.beginPath(); g.arc(-80, 1260, 260, 0, Math.PI * 2); g.fill();
+    g.drawImage(mark, 80, 200, 72, 72);
+    g.textBaseline = 'alphabetic'; g.font = F(700, 28); g.fillStyle = '#FC6302'; g.fillText('TU MONEY PERSONALITY', 80, 340); const ew = g.measureText('TU MONEY PERSONALITY').width;
+    g.fillStyle = '#A6A6A6'; g.font = F(500, 26); g.fillText('·  ' + SITE_LABEL, 80 + ew + 16, 340);
+    const nm = this.displayName().toUpperCase() || 'TU PERFIL';
+    g.fillStyle = '#F1F1F1'; fit(nm + ' ES', 700, 60, 920); g.fillText(nm + ' ES', 80, 420);
+    const title = arch.name[this.state.gender || 'n'].toUpperCase();
+    let ts = 100; g.font = F(800, ts); let lines = wrap(title, 920); while (lines.length > 3 && ts > 64) { ts -= 6; g.font = F(800, ts); lines = wrap(title, 920); }
+    let y = 420 + ts * 1.05; g.fillStyle = '#F1F1F1'; lines.forEach(l => { g.fillText(l, 80, y); y += ts * 0.98; });
+    const mTop = y - ts * 0.3 + 24, mBot = 1170, mh = mBot - mTop, s = Math.min(620 / img.naturalWidth, mh / img.naturalHeight);
+    const iw = img.naturalWidth * s, ih = img.naturalHeight * s; g.drawImage(img, (W - iw) / 2, mTop + (mh - ih) / 2, iw, ih);
+    const sy = 1200; rr(80, sy, 920, 150, 32); g.fillStyle = '#F1F1F1'; g.fill();
+    g.fillStyle = '#000'; g.font = F(800, 104); const st = String(score); g.fillText(st, 120, sy + 114);
+    const stw = g.measureText(st).width; g.font = F(700, 28); g.fillText('PUNTUACIÓN', 150 + stw, sy + 62); g.font = F(500, 24); g.fillStyle = '#4A4A4A'; g.fillText('Escala de 1 a 10', 150 + stw, sy + 98);
+    const bx = 600, bw = 360, by = sy + 58; rr(bx, by, bw, 18, 9); g.fillStyle = '#D6D6D6'; g.fill(); const pos = (score - 1) / 9; rr(bx, by, Math.max(18, bw * pos), 18, 9); g.fillStyle = arch.color; g.fill();
+    g.beginPath(); g.arc(bx + bw * pos, by + 9, 18, 0, Math.PI * 2); g.fillStyle = '#000'; g.fill();
+    g.font = F(600, 22); g.fillStyle = '#4A4A4A'; g.fillText('1', bx, by + 54); g.textAlign = 'right'; g.fillText('10', bx + bw, by + 54); g.textAlign = 'left';
+    const v = variant(this.state.answers);
+    g.font = F(500, 34); g.fillStyle = '#E6E6E6'; let dy = 1418; wrap('«' + arch.desc[v.desc] + '»', 920).slice(0, 3).forEach(l => { g.fillText(l, 80, dy); dy += 46; });
+    dy += 12; g.fillStyle = '#FC6302'; g.font = F(700, 24); g.fillText('TU SIGUIENTE MISIÓN', 80, dy); dy += 42;
+    g.fillStyle = '#F1F1F1'; g.font = F(600, 30); wrap(arch.mission[v.mission], 920).slice(0, 2).forEach(l => { g.fillText(l, 80, dy); dy += 40; });
+    g.fillStyle = '#F1F1F1'; g.font = F(800, 30); g.fillText('¿Y tú qué puntuación sacarías?', 80, Math.max(dy + 30, 1690));
+    return await new Promise((r, j) => c.toBlob(b => b ? r(b) : j(new Error('toBlob')), 'image/png'));
+  }
+  fileName() { return 'superpromo-money-personality.png'; }
+  download() { (async () => { try { const blob = this._blob; if (!blob) return; const f = new File([blob], this.fileName(), { type: 'image/png' }); const mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && /Mac/.test(navigator.platform)); if (mobile && navigator.canShare && navigator.canShare({ files: [f] })) { await navigator.share({ files: [f] }); return; } const u = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = u; a.download = this.fileName(); document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(u), 4000); } catch (e) {} })(); }
+  async share() {
+    const url = new URL(QUIZ_URL, location.href).href;
+    try {
+      if (this._blob && navigator.canShare) { const f = new File([this._blob], this.fileName(), { type: 'image/png' }); if (navigator.canShare({ files: [f] })) { await navigator.share({ files: [f], title: 'Mi Money Personality', text: '¿Y tú qué puntuación sacarías? ' + url }); return; } }
+      if (navigator.share) { await navigator.share({ title: 'Quiz SuperPromo', text: '¿Qué tanto sabes ahorrar? Haz el quiz:', url }); return; }
+      await navigator.clipboard.writeText(url); this.setState({ notice: 'Copiamos el enlace del quiz. Descarga tu card para subirla a tus historias.' });
+    } catch (e) { if (e && e.name === 'AbortError') return; this.setState({ notice: 'No se pudo compartir. Descarga tu card y súbela desde tu galería.' }); }
+  }
+  renderVals() {
+    const s = this.state, score = s.step === 'result' ? scoreFrom(s.answers) : 1, arch = archFor(score);
+    const G = [['m', 'Masculino'], ['f', 'Femenino'], ['n', 'Prefiero una redacción neutral']];
+    const Q = QUESTIONS[s.qi] || QUESTIONS[0];
+    const nm = this.displayName();
+    return {
+      isIntro: s.step === 'intro', isQuestion: s.step === 'q', isDone: s.step === 'done', isResult: s.step === 'result',
+      name: s.name, nameErr: s.nameErr || '', nameInvalid: String(!!s.nameErr), nameBorder: s.nameErr ? '#FF6BC9' : '#343434',
+      onName: e => this.setState({ name: e.target.value.slice(0, 24), nameErr: '' }),
+      genders: G.map(([k, label]) => { const a = s.gender === k; return { label, activeStr: String(a), onPick: () => this.setState({ gender: k }), border: a ? '#FB02AA' : '#343434', bg: a ? 'rgba(251,2,170,.1)' : '#0A0A0A', dot: a ? '#FB02AA' : '#6E6E6E', fill: a ? '#FB02AA' : 'transparent' }; }),
+      start: e => { e.preventDefault(); const n = this.displayName(); if (n.length < 1) { this.setState({ nameErr: 'Escribe un nombre o apodo para tu tarjeta.' }); return; } this.setState({ step: 'q', qi: 0, answers: [], nameErr: '' }); },
+      qNum: String(s.qi + 1), progress: ((s.qi + (s.answers[s.qi] != null ? 1 : 0)) / 12 * 100) + '%', question: Q.q, qRef: this.qRef,
+      options: Q.a.map((t, i) => { const a = s.answers[s.qi] === i; return { text: t, key: 'ABCD'[i], activeStr: String(a), onPick: () => this.pick(i), border: a ? '#FB02AA' : '#262626', bg: a ? 'rgba(251,2,170,.12)' : '#111', keyBg: a ? '#FB02AA' : '#222', keyColor: a ? '#000' : '#D6D6D6' }; }),
+      back: () => this.setState(st => st.step === 'done' ? { step: 'q', qi: 11 } : st.qi > 0 ? { qi: st.qi - 1 } : { step: 'intro' }),
+      reveal: () => this.reveal(), busy: !!s.busy, revealLabel: s.busy ? 'GENERANDO…' : 'VER MI RESULTADO',
+      resultHeading: nm ? nm + ', este es tu perfil' : 'Este es tu perfil',
+      cardImgRef: this.cardImgRef, cardUrl: s.cardUrl || '', cardError: !!s.cardError, noCard: !s.cardUrl,
+      cardAlt: 'Tarjeta de resultado: ' + arch.name[s.gender || 'n'] + ', puntuación ' + score + ' en escala de 1 a 10',
+      resultPlain: arch.name[s.gender || 'n'] + ' · ' + score + ' (escala de 1 a 10)',
+      download: () => this.download(), invite: async () => { const url = 'https://www.superpromo.online/Quiz.dc.html'; try { if (navigator.share) { await navigator.share({ title: 'SuperPromo', text: '¿Tú ya sabes si sabes ahorrar? Descúbrelo con este test de SuperPromo:', url }); return; } await navigator.clipboard.writeText('¿Tú ya sabes si sabes ahorrar? Descúbrelo con este test de SuperPromo: ' + url); this.setState({ inviteMsg: 'Copiamos el enlace. ¡Pégalo donde quieras!' }); } catch (e) {} }, inviteMsg: s.inviteMsg || '', share: () => this.share(),
+      restart: () => this.setState({ step: 'intro', qi: 0, answers: [], cardUrl: '', cardError: false, notice: '' }),
+      recProducts: (RECS[arch.id] || RECS.relax).p.map(x => ({ ...x, brandUpper: (x.brand || '').toUpperCase() })), recBlog: (RECS[arch.id] || RECS.relax).b.map(x => ({ ...x, catUpper: (x.cat || '').toUpperCase(), href: 'SuperPromo.dc.html#blog/' + x.slug })), igUrl: 'https://www.instagram.com/superpromo.mx/', fbUrl: 'https://www.facebook.com/superpromo.mx/', year: String(new Date().getFullYear()),
+      notice: s.notice || '', nextStep: arch.next, articleHref: 'SuperPromo.dc.html#blog/' + arch.art[0], articleLabel: arch.art[1]
+    };
+  }
+}
+</script>
+</body>
+</html>
